@@ -1,0 +1,11 @@
+[
+    {
+        "account":"admin",
+        "pwd":"123456"
+    },
+    {
+        "account":"root",
+        "pwd":"123456"
+    }
+
+]
