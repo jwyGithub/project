@@ -10,11 +10,15 @@ define(() => {
             this.twofr = document.querySelector(".twoFright");
             this.threefr = document.querySelector(".threeFright");
             this.fourfr = document.querySelector(".fourFright");
+
             this.init();
         }
         init() {
             this.login.onclick = () => {
                 location.href = "http://localhost/login/login.html";
+            };
+            this.reg.onclick = () => {
+                location.href = "http://localhost/reg/reg.html";
             };
             this.load();
         }

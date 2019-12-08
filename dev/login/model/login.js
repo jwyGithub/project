@@ -4,6 +4,7 @@ define(() => {
             this.tel = document.getElementById("tel");
             this.pwd = document.getElementById("pwd");
             this.btn = document.getElementById("login");
+            this.reg = document.getElementById("reg")
             this.back = document.getElementById("back");
             this.addEvent();
         }
@@ -17,7 +18,9 @@ define(() => {
             this.back.onclick = () =>{
                 location.href = "http://localhost/index/index.html";
             }
-         
+            this.reg.onclick = () =>{
+                location.href = "http://localhost/reg/reg.html";
+            }
         }
         login(){
             var that = this;

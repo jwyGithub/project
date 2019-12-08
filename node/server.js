@@ -49,7 +49,6 @@ http.createServer((req, res) => {
 // 登录接口
 function loginApi(req, res) {
 	let urlObj = url.parse(req.url, true);
-	// console.log(res)
 	fs.readFile('data/userInfo.json', 'utf-8', (err, data) => {
 		if (err) {
 			console.log(err)
@@ -57,9 +56,9 @@ function loginApi(req, res) {
 			let obj = JSON.parse(data);
 			let userarr = [];
 			let pwdarr = [];
-			for (var i = 0; i < obj.length; i++) {
-				userarr.push(obj[i].account);
-				pwdarr.push(obj[i].pwd)
+			for (var i = 0; i < obj.data.length; i++) {
+				userarr.push(obj.data[i].account);
+				pwdarr.push(obj.data[i].pwd)
 			}
 			var postdata = '';//定义一个空的字符串
 			req.addListener('data', function (chunk) {//一段一段的post请求体内容
@@ -69,12 +68,10 @@ function loginApi(req, res) {
 				var param = querystring.parse(postdata);
 				var a = userarr.some((user) => {
 					console.log("接收到的user是:" + param.user)
-					console.log("user数组是" + user)
 					return user == param.user;
 				})
 				var b = pwdarr.some((pwd) => {
 					console.log("接收到的pwd是:" + param.pass)
-					console.log("密码数组是" + pwd)
 					return pwd == param.pass;
 				})
 				if (a == false) {
@@ -121,7 +118,7 @@ function regApi(req,res){
 			    }
 			    console.log('----------新增成功-------------');
 			})
-			res.end();
+			res.end('{"code":200,"msg":"注册成功"}');
 		})
     })
 }
