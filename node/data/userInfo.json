@@ -1,11 +1,11 @@
 [
     {
-        "account":"admin",
+        "account":"test1",
         "pwd":"123456"
     },
     {
-        "account":"root",
+        "account":"test2",
         "pwd":"123456"
     }
 
-]
+] 

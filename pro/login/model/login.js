@@ -15,26 +15,34 @@ define(() => {
                 that.login();
             };
             this.back.onclick = () => {
-                location.href = "http://localhost/Production/index/index.html";
+                location.href = "http://localhost/index/index.html";
             };
         }
         login() {
+            var that = this;
             $.ajax({
                 url: "http://localhost:81/common/login",
                 data: {
-                    user: "admin",
-                    pass: 23213
+                    user: that.telV,
+                    pass: that.pwdV
                 },
-                type: "get",
+                type: "post",
                 success: function (res, status) {
-                    console.log(res);
-                    // console.log(status);
+                    // console.log(JSON.parse(res))
+                    that.res = JSON.parse(res);
+                    that.load();
                 },
                 error: function (res, status) {
-                    console.log(res);
+                    console.log(status);
                     // console.loag(status);
                 }
             });
+        }
+        load() {
+            if (this.res.code == 200 && this.res.msg == "登录成功") {
+                console.log(1);
+                location.href = "http://localhost/index/index.html";
+            }
         }
     }
 

@@ -1,5 +1,3 @@
-"use strict";
-
 require.config({
 	baseUrl: "model",
 	paths: {
@@ -7,7 +5,7 @@ require.config({
 	}
 });
 
-require(["jq", "index"], function (_, index) {
+require(["jq", "index"], (_, index) => {
 
 	new index();
 });
