@@ -346,7 +346,8 @@ header{
                 height: 520px;
             }
         }
-        .right{
+        
+        .oneFright{
             float: right;
             @include flex(stretch, flex-start);
             border-top: 2px solid #C1392B ;

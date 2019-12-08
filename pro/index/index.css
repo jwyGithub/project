@@ -328,7 +328,7 @@ header {
       .floor .onefloor .center img {
         width: 358px;
         height: 520px; }
-    .floor .onefloor .right {
+    .floor .onefloor .oneFright {
       float: right;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -338,23 +338,23 @@ header {
       border-top: 2px solid #C1392B;
       flex-wrap: wrap;
       width: 629px; }
-      .floor .onefloor .right a {
+      .floor .onefloor .oneFright a {
         width: 208px;
         text-align: center;
         border-style: solid;
         border-width: 0 1px 1px 0;
         border-color: transparent #DDD #DDD transparent;
         padding-top: 14px; }
-        .floor .onefloor .right a img {
+        .floor .onefloor .oneFright a img {
           width: 140px;
           height: 184px; }
-        .floor .onefloor .right a p {
+        .floor .onefloor .oneFright a p {
           font-size: 14px;
           font-weight: normal;
           font-family: "";
           line-height: 23px;
           margin: 9px 0; }
-        .floor .onefloor .right a span {
+        .floor .onefloor .oneFright a span {
           font-size: 18px;
           font-weight: normal;
           font-family: "";
