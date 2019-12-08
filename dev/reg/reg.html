@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员注册</title>
+    <link rel="stylesheet" href="../public.css">
+    <link rel="stylesheet" href="./reg.css">
+</head>
+
+<body>
+    <header>
+        <div class="margin logo">
+            <div class="imgs">
+                <img src="../imgs/logo.png" alt="">
+                <img src="../imgs/logo-kh.png" alt="">
+            </div>
+            <a href="#" id="back">返回首页</a>
+        </div>
+    </header>
+    <div class="body">
+        <div class="margin content">
+            <img src="../imgs/logo-2.png" alt="">
+            <div class="msg">
+                <div class="seclogin">
+                    <a href="#">订阅用户注册</a>
+                    <a href="#">企业用户注册</a>
+                </div>
+                <ul>
+                    <li>
+                        <span>手机号码 :</span>
+                        <input type="text" placeholder="请填写手机号" id="tel">
+                    </li>
+                    <li>
+                        <span>验证码 :</span>
+                        <input type="text" placeholder="动态码6位" id="pwd">
+                    </li>
+                </ul>
+                <div>
+                    <input type="checkbox" >
+                    <span>阅读并同意</span>
+                    <a href="https://www.zazhi.com/document-agreement.html" target="_blank" class="agreement" title="阅读并同意">《服务协议》</a>
+                </div>
+                <input type="button" value="注册" id="reg">
+                <p>已有账号?<a href="#" id="login">马上登陆</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="./login.js"></script> -->
+<script src="libs/require.js" data-main="js/regMain"></script>
+
+
+
+
+</html>

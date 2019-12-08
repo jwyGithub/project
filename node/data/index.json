@@ -1,0 +1,238 @@
+{
+    "contribute": {
+        "title": "我要投稿",
+        "firimg": "http://localhost:82/imgs/indexImg/contribute.jpg",
+        "img1": "http://localhost:82/imgs/indexImg/contribute1.png",
+        "img2": "http://localhost:82/imgs/indexImg/contribute2.png",
+        "img3": "http://localhost:82/imgs/indexImg/contribute3.png",
+        "img4": "http://localhost:82/imgs/indexImg/contribute4.png",
+        "img5": "http://localhost:82/imgs/indexImg/contribute5.png",
+        "img6": "http://localhost:82/imgs/indexImg/contribute6.png",
+        "img7": "http://localhost:82/imgs/indexImg/contribute7.png",
+        "img8": "http://localhost:82/imgs/indexImg/contribute8.png"
+    },
+    "hot": [
+        {
+            "type": "热门推荐",
+            "img1url": "http://localhost:82/imgs/indexImg/hot1.jpg",
+            "name": "中国企业家",
+            "price": "240.00"
+        },
+        {
+            "type": "热门推荐",
+            "img1url": "http://localhost:82/imgs/indexImg/hot2.jpg",
+            "name": "中国国家地理",
+            "price": "360.00"
+        },
+        {
+            "type": "热门推荐",
+            "img1url": "http://localhost:82/imgs/indexImg/hot3.jpg",
+            "name": "中国三联生活周刊",
+            "price": "780.00"
+        },
+        {
+            "type": "热门推荐",
+            "img1url": "http://localhost:82/imgs/indexImg/hot4.jpg",
+            "name": "HBRC哈佛商业评论(中文版)",
+            "price": "700.00"
+        },
+        {
+            "type": "热门推荐",
+            "img1url": "http://localhost:82/imgs/indexImg/hot5.jpg",
+            "name": "幼儿画报",
+            "price": "360.00"
+        }
+    ],
+    "oneF": [
+        {
+            "type": "1f-l",
+            "imgurl": "http://localhost:82/imgs/indexImg/1f-l.png"
+        },
+        {
+            "type": "1f-c",
+            "img1url": "http://localhost:82/imgs/indexImg/1f-c-1.png",
+            "img2url": "http://localhost:82/imgs/indexImg/1f-c-2.png",
+            "img3url": "http://localhost:82/imgs/indexImg/1f-c-3.png",
+            "img4url": "http://localhost:82/imgs/indexImg/1f-c-4.png",
+            "img5url": "http://localhost:82/imgs/indexImg/1f-c-5.png"
+        },
+        {
+            "oneFr": [
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-1.jpg",
+                    "name": "中国经济周刊",
+                    "price": "480.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-2.jpg",
+                    "name": "消费导刊",
+                    "price": "180.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-3.jpg",
+                    "name": "审计与理财",
+                    "price": "120.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-4.jpg",
+                    "name": "证券市场周刊",
+                    "price": "690.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-5.jpg",
+                    "name": "新财富",
+                    "price": "240.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-r-6.jpg",
+                    "name": "销售与市场",
+                    "price": "480.00"
+                }
+            ]
+        }
+    ],
+    "twoF": [
+        {
+            "type": "2f-l",
+            "imgurl": "http://localhost:82/imgs/indexImg/2f-l.png"
+        },
+        {
+            "type": "2f-c",
+            "img1url": "http://localhost:82/imgs/indexImg/1f-c-1.png",
+            "img2url": "http://localhost:82/imgs/indexImg/1f-c-2.png",
+            "img3url": "http://localhost:82/imgs/indexImg/1f-c-3.png",
+            "img4url": "http://localhost:82/imgs/indexImg/1f-c-4.png",
+            "img5url": "http://localhost:82/imgs/indexImg/1f-c-5.png"
+        },
+        {
+            "twoFr": [
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-1.jpg",
+                    "name": "父母必读",
+                    "price": "480.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-2.jpg",
+                    "name": "幼儿画报",
+                    "price": "180.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-3.jpg",
+                    "name": "演讲与口才.学生版",
+                    "price": "120.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-4.jpg",
+                    "name": "课堂内外（小学版）",
+                    "price": "690.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-5.jpg",
+                    "name": "童趣-环球探索",
+                    "price": "240.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/2f-r-6.jpg",
+                    "name": "中等数学",
+                    "price": "120.00"
+                }
+            ]
+        }
+    ],
+    "threeF": [
+        {
+            "type": "3f-l",
+            "imgurl": "http://localhost:82/imgs/indexImg/3f-l.png"
+        },
+        {
+            "type": "2f-c",
+            "img1url": "http://localhost:82/imgs/indexImg/3f-c-1.png",
+            "img2url": "http://localhost:82/imgs/indexImg/3f-c-2.png",
+            "img3url": "http://localhost:82/imgs/indexImg/3f-c-3.png",
+            "img4url": "http://localhost:82/imgs/indexImg/3f-c-4.png",
+            "img5url": "http://localhost:82/imgs/indexImg/3f-c-5.png"
+        },
+        {
+            "threeFr": [
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-1.jpg",
+                    "name": "父母必读",
+                    "price": "480.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-2.jpg",
+                    "name": "幼儿画报",
+                    "price": "180.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-3.jpg",
+                    "name": "演讲与口才.学生版",
+                    "price": "120.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-4.jpg",
+                    "name": "课堂内外（小学版）",
+                    "price": "690.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-5.jpg",
+                    "name": "童趣-环球探索",
+                    "price": "240.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/3f-r-6.jpg",
+                    "name": "中等数学",
+                    "price": "120.00"
+                }
+            ]
+        }
+    ],
+    "fourF": [
+        {
+            "type": "3f-l",
+            "imgurl": "http://localhost:82/imgs/indexImg/4f-l.png"
+        },
+        {
+            "type": "2f-c",
+            "img1url": "http://localhost:82/imgs/indexImg/4f-c-1.png",
+            "img2url": "http://localhost:82/imgs/indexImg/4f-c-2.png",
+            "img3url": "http://localhost:82/imgs/indexImg/4f-c-3.png",
+            "img4url": "http://localhost:82/imgs/indexImg/4f-c-4.png",
+            "img5url": "http://localhost:82/imgs/indexImg/4f-c-5.png"
+        },
+        {
+            "fourFr": [
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-1.jpg",
+                    "name": "父母必读",
+                    "price": "480.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-2.jpg",
+                    "name": "幼儿画报",
+                    "price": "180.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-3.jpg",
+                    "name": "演讲与口才.学生版",
+                    "price": "120.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-4.jpg",
+                    "name": "课堂内外（小学版）",
+                    "price": "690.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-5.jpg",
+                    "name": "童趣-环球探索",
+                    "price": "240.00"
+                },
+                {
+                    "imgurl": "http://localhost:82/imgs/indexImg/4f-r-6.jpg",
+                    "name": "中等数学",
+                    "price": "120.00"
+                }
+            ]
+        }
+    ]
+}

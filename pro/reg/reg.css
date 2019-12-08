@@ -1,0 +1,110 @@
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+.margin {
+  width: 1000px; }
+
+body {
+  background: #fafafa; }
+
+header {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f5f5f5;
+  background: #fff; }
+  header .logo {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; }
+
+.body .content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row; }
+  .body .content img, .body .content .msg {
+    margin: 70px 0; }
+  .body .content .msg {
+    background: #fff;
+    padding: 1px 23px 29px;
+    box-shadow: 0 0 10px #E2E2E2; }
+    .body .content .msg p {
+      font-size: 14px;
+      font-weight: normal;
+      font-family: "";
+      line-height: 21px;
+      text-align: right;
+      color: #b2b2b2;
+      margin-top: 10px; }
+    .body .content .msg .seclogin {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      border-bottom: 3px solid #ccc; }
+      .body .content .msg .seclogin > a {
+        color: #149eff;
+        font-size: 14px;
+        font-weight: normal;
+        font-family: "";
+        line-height: 40px;
+        text-align: center;
+        flex: 1; }
+        .body .content .msg .seclogin > a:hover {
+          color: #2194ed;
+          display: block;
+          border-bottom: 3px solid #2194ed; }
+    .body .content .msg > ul {
+      margin-bottom: 20px; }
+      .body .content .msg > ul li {
+        font-size: 14px;
+        font-weight: normal;
+        font-family: "";
+        line-height: 30px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #e6e6e6;
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 10px; }
+        .body .content .msg > ul li input {
+          background: none;
+          border: none;
+          font-size: 14px;
+          font-weight: normal;
+          font-family: "";
+          line-height: 35px; }
+        .body .content .msg > ul li span {
+          margin-right: 10px; }
+      .body .content .msg > ul li.focus {
+        border-color: #2194ed; }
+    .body .content .msg > span {
+      font-size: 14px;
+      font-weight: normal;
+      font-family: "";
+      line-height: 50px;
+      margin-left: 10px; }
+    .body .content .msg #reg {
+      margin-top: 20px;
+      text-align: center;
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "microsoft yahe";
+      line-height: 56px;
+      color: #fff;
+      background-color: #2194ed;
+      width: 348px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #cccccc;
+      border-radius: 3px;
+      cursor: pointer; }
