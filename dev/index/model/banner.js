@@ -9,7 +9,6 @@ define(() => {
             // 初始显示哪张图片
             this.index = 0;
             this.iPrev = this.items.length - 1;
-            console.log(this.items)
             this.init();
         }
         init() {
@@ -52,8 +51,6 @@ define(() => {
                 this.index++;
                 this.iPrev = this.index - 1;
             }
-            console.log(this.index)
-            console.log(this.iPrev)
             this.move(-1);
         }
         move(type) {

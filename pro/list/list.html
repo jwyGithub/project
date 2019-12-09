@@ -5,11 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品列表</title>
-    <link rel="stylesheet" href="./css/public.css">
-    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="../public.css">
+    <link rel="stylesheet" href="./list.css">
 </head>
 <body>
-   
+        <nav>
+                <div class="margin">
+                    <div class="left">
+                        <a href="#">杂志网</a>
+                        <span>|</span>
+                        <a href="#" id="login1">请登录</a>
+                        <span>|</span>
+                        <a href="#" id="reg1">免费注册</a>
+                    </div>
+                    <div class="right">
+                        <ul class="clearfix">
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">配送查询</a></li>
+                            <li><a href="#">我的订单</a></li>
+                            <li><a href="#">企业订阅</a></li>
+                            <li><a href="#">站点导航</a></li>
+                            <li><a href="#">关注我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <header class="margin">
+                <div class="left">
+                    <a href="#">
+                        <img src="../imgs/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="center">
+                    <!-- 搜索 -->
+                    <form>
+                        <input type="text" value="商品" id="sec">
+                        <input type="text" id="keyword" placeholder="请输入您要搜索的商品关键字">
+                        <input type="button" value="搜索" id="search">
+                    </form>
+                    <!-- 关键字 -->
+                    <dl class="seaKeyword">
+                        <dt>热门搜索:</dt>
+                        <dd><a href="#">幼儿画报</a></dd>
+                        <dd><a href="#">国家地理</a></dd>
+                        <dd><a href="#">读者</a></dd>
+                        <dd><a href="#">意林</a></dd>
+                        <dd><a href="#">财经</a></dd>
+                        <dd><a href="#">贝太厨房</a></dd>
+                        <dd><a href="#">时代周刊</a></dd>
+                        <dd><a href="#">特别关注</a></dd>
+                    </dl>
+                </div>
+                <div class="right">
+                    <a href="#">购物车结算</a>
+                    <img src="../imgs/tel.png" alt="tel">
+                </div>
+            </header>
+            <div class="nav margin">
+                <h3>所有分类</h3>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">2020杂志订阅季</a></li>
+                    <li><a href="#">杂志订阅排行榜</a></li>
+                    <li><a href="#">外刊订阅</a></li>
+                    <li><a href="#">企业杂志订阅</a></li>
+                    <li><a href="#">2020年订阅目录（下载）</a></li>
+                </ul>
+            </div>
+
+
+
+
+
         <div class="crumbs margin">
             <i></i>
             <a href="#">首页</a>
@@ -54,4 +121,5 @@
             </div>
         </div>
 </body>
+<script src="libs/require.js" data-main="js/Main"></script>
 </html>

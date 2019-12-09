@@ -23,7 +23,7 @@ http.createServer((req, res) => {
 		if (allowOrigin[origin]) {
 			res.setHeader('access-control-allow-origin', '*');
 		}
-		
+
 		let urlObj = url.parse(req.url, true);
 
 		if (urlObj.pathname == "/common/login") {
@@ -38,8 +38,10 @@ http.createServer((req, res) => {
 				}
 				res.end();
 			})
-		}else if(urlObj.pathname == "/common/reg"){
+		} else if (urlObj.pathname == "/common/reg") {
 			regApi(req, res);
+		} else if (urlObj.pathname == "/common/search") {
+			searchApi(req, res);
 		}
 
 	}
@@ -89,9 +91,9 @@ function loginApi(req, res) {
 }
 
 // 注册接口
-function regApi(req,res){
+function regApi(req, res) {
 	let urlObj = url.parse(req.url, true);
-	fs.readFile('data/userInfo.json','utf-8', (err, data) => {
+	fs.readFile('data/userInfo.json', 'utf-8', (err, data) => {
 		var postdata = '';//定义一个空的字符串
 		req.addListener('data', function (chunk) {//一段一段的post请求体内容
 			postdata += chunk;
@@ -101,11 +103,11 @@ function regApi(req,res){
 			console.log("接收到的user是:" + param.user)
 			console.log("接收到的pwd是:" + param.pass)
 			var params = {
-				"account":param.user,
-				"pwd":param.pass
+				"account": param.user,
+				"pwd": param.pass
 			}
-			if(err){
-			    return console.error(err);
+			if (err) {
+				return console.error(err);
 			}
 			var person = data.toString();//将二进制的数据转换为字符串
 			person = JSON.parse(person);//将字符串转换为json对象
@@ -113,13 +115,67 @@ function regApi(req,res){
 			person.total = person.data.length;//定义一下总条数，为以后的分页打基础
 			console.log(person.data);
 			var str = JSON.stringify(person);//因为nodejs的写入文件只认识字符串或者二进制数，所以把json对象转换成字符串重新写入json文件中
-			fs.writeFile('data/userInfo.json',str,function(err){
-			    if(err){
-			        console.error(err);
-			    }
-			    console.log('----------新增成功-------------');
+			fs.writeFile('data/userInfo.json', str, function (err) {
+				if (err) {
+					console.error(err);
+				}
+				console.log('----------新增成功-------------');
 			})
 			res.end('{"code":200,"msg":"注册成功"}');
 		})
-    })
+	})
 }
+
+// 搜索接口
+function searchApi(req, res) {
+	let urlObj = url.parse(req.url, true);
+	fs.readFile('data/list.json', 'utf-8', (err, data) => {
+		// console.log("接收到的搜索词是：" + urlObj.query.key);
+		let list = JSON.parse(data)
+		//取出所有的title
+		let listArr = [];
+		for (var i = 0; i < list.length; i++) {
+			listArr.push(list[i].keyword)
+		}
+		console.log("keyword的数组是：" + listArr)
+		// 取出所有符合关键字的index
+		var indexArr = [];
+		console.log("接收到的搜索词是:" + urlObj.query.key);
+
+		for (var i = 0; i < listArr.length; i++) {
+			// console.log(listArr[i] == urlObj.query.key)
+			if (listArr[i] == urlObj.query.key) {
+				indexArr.push(i)
+			}
+		}
+		var infoArr = []
+		for (var i = 0; i < indexArr.length; i++) {
+			infoArr.push({
+				"goodsId":indexArr[i],
+				"imgurl":list[indexArr[i]].imgurl,
+				"title":list[indexArr[i]].title,
+				"keyword":list[indexArr[i]].keyword,
+				"price":list[indexArr[i]].price
+			})
+		}
+		infoArr.unshift(`200`)
+		// res.write(infoArr)
+		res.end(JSON.stringify(infoArr));
+	})
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

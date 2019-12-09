@@ -1,5 +1,3 @@
-"use strict";
-
 require.config({
 	baseUrl: "model",
 	paths: {
@@ -7,7 +5,7 @@ require.config({
 	}
 });
 
-require(["jq", "login"], function (_, Userlogin) {
+require(["jq", "login"], (_, Userlogin) => {
 
 	new Userlogin();
 });
