@@ -1,14 +1,16 @@
 define(() => {
     class Banner {
-        constructor() {
-            this.items = $(".banner").find(".imgbox").find("img");
+        constructor(options) {
+            this.items = options.banner || "";
+            this.delaytime = options.delaytime || 5000;
+            this.movetime = options.movetime || 2000;
             this.left = document.getElementById("left");
             this.right = document.getElementById("right");
             // 初始显示哪张图片
             this.index = 0;
             this.iPrev = this.items.length - 1;
+            console.log(this.items)
             this.init();
-
         }
         init() {
             var that = this;
@@ -26,9 +28,6 @@ define(() => {
             this.right.onclick = () =>{
                 that.btnR();
             }
-
-            
-
             this.autoplay();
         }
         btnL() {
@@ -53,6 +52,8 @@ define(() => {
                 this.index++;
                 this.iPrev = this.index - 1;
             }
+            console.log(this.index)
+            console.log(this.iPrev)
             this.move(-1);
         }
         move(type) {
@@ -60,23 +61,20 @@ define(() => {
                 left:0
             }).stop().animate({
 				left:this.items.eq(0).width() * type
-			}).end().eq(this.index).css({
+			},this.movetime).end().eq(this.index).css({
 				left:-this.items.eq(0).width() * type
 			}).stop().animate({
 				left:0
-			});
+			},this.movetime);
         }
+        //自动播放
         autoplay(){
             var that = this;
             this.t = setInterval(()=>{
                 that.btnR();
-            },4000)
+            },that.delaytime)
         }
 
     }
-
-
-
-
     return Banner;
 });

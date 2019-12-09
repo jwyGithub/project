@@ -64,7 +64,10 @@ header {
       font-size: 14px;
       font-weight: normal;
       font-family: "";
-      line-height: 36px; }
+      line-height: 36px;
+      cursor: pointer;
+      background: #309ae6;
+      color: #fff; }
   header .center dl {
     overflow: hidden;
     margin-top: 5px;
@@ -167,11 +170,27 @@ header {
     justify-content: space-around;
     height: 400px;
     top: 0; }
-    .menu > ul li {
-      padding: 0 15px;
-      font-size: 14px; }
-      .menu > ul li a {
+    .menu > ul > li.list {
+      font: 14px/34px "";
+      width: 232px;
+      text-indent: 20px;
+      height: 34px; }
+      .menu > ul > li.list:hover {
+        background: #309ae6; }
+      .menu > ul > li.list > a {
         color: #fff; }
+      .menu > ul > li.list .items {
+        position: absolute;
+        left: 232px;
+        top: 0;
+        width: 300px;
+        background: #fff; }
+        .menu > ul > li.list .items a {
+          float: left;
+          width: 33%;
+          text-align: center;
+          line-height: 60px;
+          border-bottom: 1px dashed gray; }
   .menu .login {
     position: absolute;
     z-index: 99999;
@@ -294,17 +313,18 @@ header {
     text-align: center; }
     .floor h3 span {
       margin-right: 10px; }
-  .floor .onefloor {
-    margin: 20px 0; }
-    .floor .onefloor .left {
+  .floor .floorstyle {
+    margin: 20px 0;
+    position: relative; }
+    .floor .floorstyle .left {
       width: 212px;
       height: 520px;
       float: left;
       background: #F9EEF2; }
-      .floor .onefloor .left ul {
+      .floor .floorstyle .left ul {
         padding: 0 15px;
         margin-top: 20px; }
-        .floor .onefloor .left ul li {
+        .floor .floorstyle .left ul li {
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
@@ -314,34 +334,39 @@ header {
           font-weight: normal;
           font-family: "";
           line-height: 30px; }
-      .floor .onefloor .left .left-img {
+      .floor .floorstyle .left .left-img {
         position: relative;
         height: 295px;
         margin: 10px 0; }
-        .floor .onefloor .left .left-img > img {
+        .floor .floorstyle .left .left-img > img {
           position: absolute;
           left: 0;
           right: 0;
           margin: 0 auto; }
-      .floor .onefloor .left > dl {
+      .floor .floorstyle .left > dl {
         padding: 0 15px;
         margin-top: 20px; }
-        .floor .onefloor .left > dl dt {
+        .floor .floorstyle .left > dl dt {
           font-size: 12px;
           font-weight: normal;
           font-family: "";
           line-height: 30px; }
-        .floor .onefloor .left > dl dd {
+        .floor .floorstyle .left > dl dd {
           padding: 0 10px;
           margin-top: 10px; }
-    .floor .onefloor .center {
-      float: left;
+    .floor .floorstyle .imgbox {
       height: 520px;
-      border-top: 2px solid #C1392B; }
-      .floor .onefloor .center img {
+      border-top: 2px solid #C1392B;
+      width: 358px;
+      position: absolute;
+      left: 212px;
+      overflow: hidden; }
+      .floor .floorstyle .imgbox img {
         width: 358px;
-        height: 520px; }
-    .floor .onefloor .oneFright {
+        height: 520px;
+        display: block;
+        position: absolute; }
+    .floor .floorstyle .oneFright {
       float: right;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -351,23 +376,23 @@ header {
       border-top: 2px solid #C1392B;
       flex-wrap: wrap;
       width: 629px; }
-      .floor .onefloor .oneFright a {
+      .floor .floorstyle .oneFright a {
         width: 208px;
         text-align: center;
         border-style: solid;
         border-width: 0 1px 1px 0;
         border-color: transparent #DDD #DDD transparent;
         padding-top: 14px; }
-        .floor .onefloor .oneFright a img {
+        .floor .floorstyle .oneFright a img {
           width: 140px;
           height: 184px; }
-        .floor .onefloor .oneFright a p {
+        .floor .floorstyle .oneFright a p {
           font-size: 14px;
           font-weight: normal;
           font-family: "";
           line-height: 23px;
           margin: 9px 0; }
-        .floor .onefloor .oneFright a span {
+        .floor .floorstyle .oneFright a span {
           font-size: 18px;
           font-weight: normal;
           font-family: "";

@@ -14,30 +14,35 @@
     "hot": [
         {
             "type": "热门推荐",
+            "hotid": 1,
             "img1url": "http://localhost:82/imgs/indexImg/hot1.jpg",
             "name": "中国企业家",
             "price": "240.00"
         },
         {
             "type": "热门推荐",
+            "hotid": 2,
             "img1url": "http://localhost:82/imgs/indexImg/hot2.jpg",
             "name": "中国国家地理",
             "price": "360.00"
         },
         {
             "type": "热门推荐",
+            "hotid": 3,
             "img1url": "http://localhost:82/imgs/indexImg/hot3.jpg",
             "name": "中国三联生活周刊",
             "price": "780.00"
         },
         {
             "type": "热门推荐",
+            "hotid": 4,
             "img1url": "http://localhost:82/imgs/indexImg/hot4.jpg",
             "name": "HBRC哈佛商业评论(中文版)",
             "price": "700.00"
         },
         {
             "type": "热门推荐",
+            "hotid": 5,
             "img1url": "http://localhost:82/imgs/indexImg/hot5.jpg",
             "name": "幼儿画报",
             "price": "360.00"
@@ -46,15 +51,32 @@
     "oneF": [
         {
             "type": "1f-l",
+            "oneid": 1,
             "imgurl": "http://localhost:82/imgs/indexImg/1f-l.png"
         },
         {
-            "type": "1f-c",
-            "img1url": "http://localhost:82/imgs/indexImg/1f-c-1.png",
-            "img2url": "http://localhost:82/imgs/indexImg/1f-c-2.png",
-            "img3url": "http://localhost:82/imgs/indexImg/1f-c-3.png",
-            "img4url": "http://localhost:82/imgs/indexImg/1f-c-4.png",
-            "img5url": "http://localhost:82/imgs/indexImg/1f-c-5.png"
+            "oneFc": [
+                {
+                    "id": 1,
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-c-1.jpg"
+                },
+                {
+                    "id": 2,
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-c-2.jpg"
+                },
+                {
+                    "id": 3,
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-c-3.jpg"
+                },
+                {
+                    "id": 4,
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-c-4.jpg"
+                },
+                {
+                    "id": 5,
+                    "imgurl": "http://localhost:82/imgs/indexImg/1f-c-5.jpg"
+                }
+            ]
         },
         {
             "oneFr": [

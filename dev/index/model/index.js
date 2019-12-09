@@ -69,6 +69,7 @@ define(() => {
             }
             this.onefr.innerHTML = str;
 
+
             // 2f渲染
             var str = "";
             for (var i = 0; i < this.res.twoF[2].twoFr.length; i++) {
