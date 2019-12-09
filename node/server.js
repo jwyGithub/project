@@ -23,6 +23,7 @@ http.createServer((req, res) => {
 		if (allowOrigin[origin]) {
 			res.setHeader('access-control-allow-origin', '*');
 		}
+		
 		let urlObj = url.parse(req.url, true);
 
 		if (urlObj.pathname == "/common/login") {

@@ -10,16 +10,16 @@ define(() => {
             this.twofr = document.querySelector(".twoFright");
             this.threefr = document.querySelector(".threeFright");
             this.fourfr = document.querySelector(".fourFright");
-
             this.init();
+
         }
         init() {
             this.login.onclick = () => {
                 location.href = "http://localhost/login/login.html";
-            };
+            }
             this.reg.onclick = () => {
                 location.href = "http://localhost/reg/reg.html";
-            };
+            }
             this.load();
         }
         load() {
@@ -33,7 +33,7 @@ define(() => {
                     // console.log(that.res)
                     that.display();
                 }
-            });
+            })
         }
         display() {
             // 小banner渲染
@@ -43,7 +43,7 @@ define(() => {
             <dd><img src="${this.res.contribute.img2}" alt=""></dd>
             <dd><img src="${this.res.contribute.img3}" alt=""></dd>
             <dd><img src="${this.res.contribute.img4}" alt=""></dd>
-            </dl>`;
+            </dl>`
 
             // 热门推荐渲染
             var str = "";
@@ -54,7 +54,7 @@ define(() => {
                             <p>${this.res.hot[i].name}</p>
                         </a>
                         <span>商城价：￥${this.res.hot[i].price}</span>
-                    </li>`;
+                    </li>`
             }
             this.hot.innerHTML = str;
 
@@ -65,7 +65,7 @@ define(() => {
                     <img src="${this.res.oneF[2].oneFr[i].imgurl}" alt="">
                     <p>${this.res.oneF[2].oneFr[i].name}</p>
                     <span>￥${this.res.oneF[2].oneFr[i].price}</span>
-                    </a>`;
+                    </a>`
             }
             this.onefr.innerHTML = str;
 
@@ -76,7 +76,7 @@ define(() => {
                     <img src="${this.res.twoF[2].twoFr[i].imgurl}" alt="">
                     <p>${this.res.twoF[2].twoFr[i].name}</p>
                     <span>￥${this.res.twoF[2].twoFr[i].price}</span>
-                    </a>`;
+                    </a>`
             }
             this.twofr.innerHTML = str;
 
@@ -87,7 +87,7 @@ define(() => {
                     <img src="${this.res.threeF[2].threeFr[i].imgurl}" alt="">
                     <p>${this.res.threeF[2].threeFr[i].name}</p>
                     <span>￥${this.res.threeF[2].threeFr[i].price}</span>
-                    </a>`;
+                    </a>`
             }
             this.threefr.innerHTML = str;
 
@@ -98,12 +98,24 @@ define(() => {
                     <img src="${this.res.fourF[2].fourFr[i].imgurl}" alt="">
                     <p>${this.res.fourF[2].fourFr[i].name}</p>
                     <span>￥${this.res.fourF[2].fourFr[i].price}</span>
-                    </a>`;
+                    </a>`
             }
-            console.log(str);
+            // console.log(str)
             this.fourfr.innerHTML = str;
         }
     }
 
+
+
+
+
+
+
+
+
+
     return load;
-});
+
+
+
+})

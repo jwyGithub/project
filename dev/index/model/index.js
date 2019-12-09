@@ -6,12 +6,12 @@ define(() => {
             this.reg = document.getElementById("reg");
             this.con = document.querySelector(".contribute");
             this.hot = document.querySelector(".wrapper-a");
-            this.onefr = document.querySelector(".oneFright")
-            this.twofr = document.querySelector(".twoFright")
-            this.threefr = document.querySelector(".threeFright")
-            this.fourfr = document.querySelector(".fourFright")
-
+            this.onefr = document.querySelector(".oneFright");
+            this.twofr = document.querySelector(".twoFright");
+            this.threefr = document.querySelector(".threeFright");
+            this.fourfr = document.querySelector(".fourFright");
             this.init();
+
         }
         init() {
             this.login.onclick = () => {
@@ -100,7 +100,7 @@ define(() => {
                     <span>￥${this.res.fourF[2].fourFr[i].price}</span>
                     </a>`
             }
-            console.log(str)
+            // console.log(str)
             this.fourfr.innerHTML = str;
         }
     }

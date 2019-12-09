@@ -6,6 +6,7 @@ define(() => {
             this.btn = document.getElementById("login");
             this.reg = document.getElementById("reg")
             this.back = document.getElementById("back");
+
             this.addEvent();
         }
         addEvent(){

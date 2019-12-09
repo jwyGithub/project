@@ -146,24 +146,38 @@ header{
         }
     }
 }
+
 .banner{
     margin: 0 auto;
-    position: relative;height: 400px;
+    position: relative;
+    height: 400px;
+    width: 100%;
     .imgbox{
         @include auto;
         overflow: hidden;
+        width: 100%;
         height: 400px;
         top: 0;
-        a{
+        > img{
             display: block;
-            img{
-                display: block;
-                width: 100%;
-                height: 400px;
-                position: absolute;
-            }
+            width: 1423px;
+            height: 400px;
+            position: absolute;
         } 
     }
+    .btns{
+        display: none;
+        input{
+            width:40px;
+            height:40px;
+            background: rgba(200,200,200,0.6);
+            border: none;
+            position: absolute;
+            top:180px;
+        }
+    }
+    #left{left:0}
+    #right{right:0}
 }
 .menu{
     position: relative;

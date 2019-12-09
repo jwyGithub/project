@@ -5,7 +5,8 @@ require.config({
 	}
 });
 
-require(["jq", "index"], (_, index) => {
+require(["jq", "index", "banner"], (_, index, banner) => {
 
 	new index();
+	new banner();
 });
