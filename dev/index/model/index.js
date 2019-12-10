@@ -42,21 +42,10 @@ define(() => {
             })
         }
         setCookie(){
-            // var that = this;
-            // // http://localhost:81/common/login
-            // $.ajax({
-            //     url: "http://localhost:81/common/search",
-            //     data:{
-            //         key:that.keywordV
-            //     },
-            //     success: function (res) {
-            //         // console.log(res)
-            //         that.key = JSON.parse(res);
-                   
-            //         that.info();
-            //     }
-            // })
-            setCookie("keyword",this.keywordV);
+            setCookie("keyword",this.keywordV,{
+                path:"/"
+            });
+
             location.href = "http://localhost/list/list.html";
             
         }

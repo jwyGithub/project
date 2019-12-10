@@ -130,52 +130,41 @@ function regApi(req, res) {
 function searchApi(req, res) {
 	let urlObj = url.parse(req.url, true);
 	fs.readFile('data/list.json', 'utf-8', (err, data) => {
-		// console.log("接收到的搜索词是：" + urlObj.query.key);
-		let list = JSON.parse(data)
-		//取出所有的title
-		let listArr = [];
-		for (var i = 0; i < list.length; i++) {
-			listArr.push(list[i].keyword)
-		}
-		console.log("keyword的数组是：" + listArr)
-		// 取出所有符合关键字的index
-		var indexArr = [];
-		console.log("接收到的搜索词是:" + urlObj.query.key);
+		console.log("接收到的搜索词是：" + urlObj.query.key);
+		if (err) {
+			res.end(err)
+		} else {
+			let l = JSON.parse(data);
 
-		for (var i = 0; i < listArr.length; i++) {
-			// console.log(listArr[i] == urlObj.query.key)
-			if (listArr[i] == urlObj.query.key) {
-				indexArr.push(i)
+			// {
+			// 	"goodsId":1,
+			// 	"imgurl":"http://localhost:82/imgs/listImg/list-1.jpg",
+			// 	"title":"《幼儿画报课堂》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。读者...",
+			// 	"keyword":"幼儿画报",
+			// 	"price":"¥360.00"
+			// }
+			var str = "";
+			//判断接收到的keyword是否和json文件的title符合
+			for (var i = 0; i < l.list.length; i++) {
+				if ((l.list[i].title).includes(urlObj.query.key)) {
+					str += `
+							{
+								"goodsId":${l.list[i].goodsId},
+								"imgurl":"${l.list[i].imgurl}",
+								"title":"${l.list[i].title}",
+								"price":"${l.list[i].price}"
+							},`
+
+				}
+				// res.end()
 			}
+			str1 = str.slice(0,str.length-1)
+			listStr = `[${str1}]`
+			// console.log(listStr)
+			res.end(listStr)
 		}
-		var infoArr = []
-		for (var i = 0; i < indexArr.length; i++) {
-			infoArr.push({
-				"goodsId":indexArr[i],
-				"imgurl":list[indexArr[i]].imgurl,
-				"title":list[indexArr[i]].title,
-				"keyword":list[indexArr[i]].keyword,
-				"price":list[indexArr[i]].price
-			})
-		}
-		infoArr.unshift(`200`)
-		// res.write(infoArr)
-		res.end(JSON.stringify(infoArr));
 	})
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

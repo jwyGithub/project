@@ -8,6 +8,7 @@ require.config({
 require(["jq","listinfo"],(_,info)=>{
 	
 
+	
 	new info();
 
 

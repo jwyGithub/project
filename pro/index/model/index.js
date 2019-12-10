@@ -18,14 +18,14 @@ define(() => {
             var that = this;
             this.login.onclick = () => {
                 location.href = "http://localhost/login/login.html";
-            }
+            };
             this.reg.onclick = () => {
                 location.href = "http://localhost/reg/reg.html";
-            }
+            };
             this.search.onclick = () => {
                 that.keywordV = this.keyword.value;
                 that.setCookie();
-            }
+            };
             this.load();
         }
         load() {
@@ -39,26 +39,14 @@ define(() => {
                     // console.log(that.res)
                     that.display();
                 }
-            })
+            });
         }
-        setCookie(){
-            // var that = this;
-            // // http://localhost:81/common/login
-            // $.ajax({
-            //     url: "http://localhost:81/common/search",
-            //     data:{
-            //         key:that.keywordV
-            //     },
-            //     success: function (res) {
-            //         // console.log(res)
-            //         that.key = JSON.parse(res);
-                   
-            //         that.info();
-            //     }
-            // })
-            setCookie("keyword",this.keywordV);
+        setCookie() {
+            setCookie("keyword", this.keywordV, {
+                path: "/"
+            });
+
             location.href = "http://localhost/list/list.html";
-            
         }
         display() {
             // 小banner渲染
@@ -68,7 +56,7 @@ define(() => {
             <dd><img src="${this.res.contribute[2].imgurl}" alt=""></dd>
             <dd><img src="${this.res.contribute[3].imgurl}" alt=""></dd>
             <dd><img src="${this.res.contribute[4].imgurl}" alt=""></dd>
-            </dl>`
+            </dl>`;
 
             // 热门推荐渲染
             var str = "";
@@ -79,7 +67,7 @@ define(() => {
                 <p>${this.res.hot[i].name}</p>
                 </a>
                 <span>商城价：￥${this.res.hot[i].price}</span>
-                </li>`
+                </li>`;
             }
             this.hot.innerHTML = str;
 
@@ -90,11 +78,10 @@ define(() => {
                     <img src="${this.res.oneFr[i].imgurl}" alt="">
                     <p>${this.res.oneFr[i].name}</p>
                     <span>￥${this.res.oneFr[i].price}</span>
-                    </a>`
+                    </a>`;
             }
             this.onefr.innerHTML = str;
-            
-            
+
             // 2f渲染
             var str = "";
             for (var i = 0; i < this.res.twoFr.length; i++) {
@@ -102,7 +89,7 @@ define(() => {
                 <img src="${this.res.twoFr[i].imgurl}" alt="">
                 <p>${this.res.twoFr[i].name}</p>
                 <span>￥${this.res.twoFr[i].price}</span>
-                </a>`
+                </a>`;
             }
             this.twofr.innerHTML = str;
 
@@ -113,7 +100,7 @@ define(() => {
                     <img src="${this.res.threeFr[i].imgurl}" alt="">
                     <p>${this.res.threeFr[i].name}</p>
                     <span>￥${this.res.threeFr[i].price}</span>
-                    </a>`
+                    </a>`;
             }
             this.threefr.innerHTML = str;
 
@@ -124,34 +111,24 @@ define(() => {
                     <img src="${this.res.fourFr[i].imgurl}" alt="">
                     <p>${this.res.fourFr[i].name}</p>
                     <span>￥${this.res.fourFr[i].price}</span>
-                    </a>`
+                    </a>`;
             }
             // console.log(str)
             this.fourfr.innerHTML = str;
         }
     }
 
-    function setCookie(key,val,options){
+    function setCookie(key, val, options) {
         options = options || {};
-        var p = options.path ? ";path="+options.path : "";
+        var p = options.path ? ";path=" + options.path : "";
         var e = "";
-        if(options.expires){
+        if (options.expires) {
             var d = new Date();
-            d.setDate(d.getDate()+options.expires)
-            e = ";expires="+d;
+            d.setDate(d.getDate() + options.expires);
+            e = ";expires=" + d;
         }
-        document.cookie = key+"="+ val + e + p;
+        document.cookie = key + "=" + val + e + p;
     }
 
-
-
-
-
-
-
-
     return load;
-
-
-
-})
+});
