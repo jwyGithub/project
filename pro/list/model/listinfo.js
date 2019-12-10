@@ -11,10 +11,9 @@ define(() => {
             this.key = getCookie("keyword");
 
             this.search.onclick = function () {
-                that.listkey = that.keyword.value || this.key;
+                that.key = that.keyword.value;
                 that.load();
             };
-
             this.load();
         }
         load() {
@@ -23,7 +22,7 @@ define(() => {
             $.ajax({
                 url: "http://localhost:81/common/search",
                 data: {
-                    key: that.listkey
+                    key: that.key
                 },
                 success: function (res) {
                     that.res = JSON.parse(res);
@@ -39,12 +38,20 @@ define(() => {
                             <div class="items">
                                 <img src="${this.res[i].imgurl}" alt="">
                             </div>
-                            <p>${this.res[i].title}</p>
+                            <p class="overmore">${this.res[i].title}</p>
                             <div class="price">${this.res[i].price}</div>
                         </li>`;
             }
-            // console.log(this.res)
-            this.goods.innerHTML = str;
+            console.log(str);
+            if (str == "") {
+                this.goods.innerHTML = `
+                <span>没有找到符合条件的商品</span>`;
+            } else {
+                this.goods.innerHTML = str;
+            }
+
+            // 清除cookie
+            removeCookie("keyword", { path: "/" });
         }
     }
 
@@ -56,6 +63,27 @@ define(() => {
             }
         }
         return "";
+    }
+
+    function removeCookie(key, options) {
+        options = options || {};
+        setCookie(key, null, {
+            expires: -1,
+            path: options.path
+        });
+    }
+
+    //设置cookie
+    function setCookie(key, val, options) {
+        options = options || {};
+        var p = options.path ? ";path=" + options.path : "";
+        var e = "";
+        if (options.expires) {
+            var d = new Date();
+            d.setDate(d.getDate() + options.expires);
+            e = ";expires=" + d;
+        }
+        document.cookie = key + "=" + val + e + p;
     }
 
     return Info;

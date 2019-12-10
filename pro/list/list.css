@@ -152,64 +152,59 @@ header {
         text-align: center; }
         .content .left .history a.all:hover {
           color: #F87622; }
-
-.content .left
-.content .left .history a.recent {
-  background: #F5F5F5;
-  font: 14px/36px "";
-  text-indent: 10px; }
-
-.content .right {
-  flex: 1;
-  margin-left: 15px; }
-
-.content .right .sort {
-  display: flex;
-  font: 12px/40px "";
-  background: #f7f7f7;
-  border: 1px solid #d7d7d7; }
-
-.content .right .sort p {
-  width: 80px;
-  text-align: center; }
-
-/* .content .right .sort ul{border:solid 1px #E6E6E6} */
-.content .right .sort ul li {
-  float: left; }
-
-.content .right .sort ul li a {
-  padding: 10px; }
-
-/* .content .right .goods{display: flex;justify-content: space-between;} */
-.content .right .goods {
-  margin-top: 20px; }
-
-.content .right .goods ul {
-  box-sizing: border-box; }
-
-.content .right .goods ul li {
-  border: 1px solid #d0d0d0;
-  width: 230px;
-  text-align: center;
-  float: left;
-  margin-bottom: 20px;
-  margin-right: 15px; }
-
-.content .right .goods ul li:nth-child(4) {
-  margin-right: 0; }
-
-.content .right .goods ul li:nth-child(8) {
-  margin-right: 0; }
-
-.content .right .goods ul li:nth-child(12) {
-  margin-right: 0; }
-
-.content .right .goods ul li img {
-  margin: 5px 5px 0 5px; }
-
-.content .right .goods p {
-  width: 230px; }
-
-.content .right .goods ul li .items img {
-  width: 28px;
-  height: 28px; }
+  .content .right {
+    flex: 1;
+    margin-left: 15px; }
+    .content .right .sort {
+      display: flex;
+      font: 12px/40px "";
+      background: #f7f7f7;
+      border: 1px solid #d7d7d7; }
+      .content .right .sort p {
+        width: 80px;
+        text-align: center; }
+      .content .right .sort ul li {
+        float: left; }
+        .content .right .sort ul li a {
+          padding: 10px; }
+    .content .right .goods {
+      margin-top: 20px; }
+      .content .right .goods ul {
+        box-sizing: border-box; }
+        .content .right .goods ul li {
+          border: 1px solid #d0d0d0;
+          width: 230px;
+          text-align: center;
+          float: left;
+          margin-bottom: 20px;
+          margin-right: 15px;
+          height: 330px; }
+          .content .right .goods ul li:nth-child(4) {
+            margin-right: 0; }
+          .content .right .goods ul li:nth-child(8) {
+            margin-right: 0; }
+          .content .right .goods ul li:nth-child(12) {
+            margin-right: 0; }
+          .content .right .goods ul li img {
+            margin: 5px 5px 0 5px;
+            max-width: 220px;
+            max-height: 220px; }
+          .content .right .goods ul li p {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: "";
+            line-height: 16px;
+            width: 210px;
+            padding: 0 10px;
+            margin-top: 10px; }
+          .content .right .goods ul li .items img {
+            width: 28px;
+            height: 28px; }
+          .content .right .goods ul li .price {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "";
+            line-height: 30px;
+            color: #c00; }
+      .content .right .goods p {
+        width: 230px; }

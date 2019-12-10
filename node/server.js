@@ -146,6 +146,8 @@ function searchApi(req, res) {
 			var str = "";
 			//判断接收到的keyword是否和json文件的title符合
 			for (var i = 0; i < l.list.length; i++) {
+				// console.log(l.list)
+				console.log((l.list[i].title).includes(urlObj.query.key))
 				if ((l.list[i].title).includes(urlObj.query.key)) {
 					str += `
 							{
@@ -156,11 +158,10 @@ function searchApi(req, res) {
 							},`
 
 				}
-				// res.end()
 			}
 			str1 = str.slice(0,str.length-1)
 			listStr = `[${str1}]`
-			// console.log(listStr)
+			console.log(listStr)
 			res.end(listStr)
 		}
 	})
