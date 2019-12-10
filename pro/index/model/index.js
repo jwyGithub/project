@@ -12,6 +12,7 @@ define(() => {
             this.fourfr = document.querySelector(".fourFright");
             this.search = document.getElementById("search");
             this.keyword = document.getElementById("keyword");
+
             this.init();
         }
         init() {
@@ -26,6 +27,17 @@ define(() => {
                 that.keywordV = this.keyword.value;
                 that.setCookie();
             };
+
+            // 点击热门搜索关键词
+            var a = $(".seaKeyword").find("dd").find("a");
+            for (let i = 0; i < a.length; i++) {
+                a[i].onclick = function () {
+                    setCookie("keyword", a[i].innerHTML, {
+                        path: "/"
+                    });
+                    location.href = "http://localhost/list/list.html";
+                };
+            }
             this.load();
         }
         load() {

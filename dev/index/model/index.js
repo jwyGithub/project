@@ -12,6 +12,7 @@ define(() => {
             this.fourfr = document.querySelector(".fourFright");
             this.search = document.getElementById("search");
             this.keyword = document.getElementById("keyword");
+
             this.init();
         }
         init() {
@@ -25,6 +26,17 @@ define(() => {
             this.search.onclick = () => {
                 that.keywordV = this.keyword.value;
                 that.setCookie();
+            }
+
+            // 点击热门搜索关键词
+            var a = $(".seaKeyword").find("dd").find("a");
+            for (let i = 0; i < a.length; i++) {
+                a[i].onclick = function () {
+                    setCookie("keyword", a[i].innerHTML, {
+                        path: "/"
+                    });
+                    location.href = "http://localhost/list/list.html";
+                }
             }
             this.load();
         }
@@ -41,13 +53,13 @@ define(() => {
                 }
             })
         }
-        setCookie(){
-            setCookie("keyword",this.keywordV,{
-                path:"/"
+        setCookie() {
+            setCookie("keyword", this.keywordV, {
+                path: "/"
             });
 
             location.href = "http://localhost/list/list.html";
-            
+
         }
         display() {
             // 小banner渲染
@@ -82,8 +94,8 @@ define(() => {
                     </a>`
             }
             this.onefr.innerHTML = str;
-            
-            
+
+
             // 2f渲染
             var str = "";
             for (var i = 0; i < this.res.twoFr.length; i++) {
@@ -120,16 +132,16 @@ define(() => {
         }
     }
 
-    function setCookie(key,val,options){
+    function setCookie(key, val, options) {
         options = options || {};
-        var p = options.path ? ";path="+options.path : "";
+        var p = options.path ? ";path=" + options.path : "";
         var e = "";
-        if(options.expires){
+        if (options.expires) {
             var d = new Date();
-            d.setDate(d.getDate()+options.expires)
-            e = ";expires="+d;
+            d.setDate(d.getDate() + options.expires)
+            e = ";expires=" + d;
         }
-        document.cookie = key+"="+ val + e + p;
+        document.cookie = key + "=" + val + e + p;
     }
 
 
