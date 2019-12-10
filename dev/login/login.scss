@@ -47,17 +47,19 @@ header{
 
 .body{
     .content{
-        @include flex(stretch,space-between);
-        flex-direction: row;
+        // @include flex(stretch,space-between);
+        // flex-direction: row;
         img{
             margin: 70px 0;
+            float: left;
+            width: 578px;
         }
         .msg{
-            // width: 340px;
+            margin: 70px 0;
             background: $bgcolor;
-            @extend img ;
             padding: 32px 23px 29px;
             box-shadow: 0 0 10px #E2E2E2;
+            float: right;
             p{
                 @include font(normal,14px,21px,"");
                 text-align: right;
@@ -100,21 +102,23 @@ header{
                     border-color: #2194ed;
                 }
             }
+            .tip{
+                float: left;
+                @include font(700, 14px, 50px, "");
+                color: red;
+            }
             a.forget{
-                display: block;
+                float: right;
                 color: #333;
                 @include font(normal, 12px, 50px, "");
-                margin-top: 15px;
-                text-align: right;
-                padding-right: 20px;
             }
             #login{
-                text-align: center;
-                display: block;
+                // text-align: center;
+                // display: block;
                 @include font(600, 16px, 56px, "microsoft yahe");
                 color: $bgcolor;
                 background-color:#2194ed;
-                width: 348px;
+                width: 330px;
                 @include border(1px, solid, #cccccc);
                 border-radius: 3px;
                 cursor: pointer;

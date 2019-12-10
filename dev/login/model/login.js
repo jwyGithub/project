@@ -6,7 +6,8 @@ define(() => {
             this.btn = document.getElementById("login");
             this.reg = document.getElementById("reg")
             this.back = document.getElementById("back");
-
+            this.tip = document.querySelector(".tip");
+            this.forget = document.querySelector(".forget");
             this.addEvent();
         }
         addEvent(){
@@ -22,6 +23,9 @@ define(() => {
             this.reg.onclick = () =>{
                 location.href = "http://localhost/reg/reg.html";
             }
+            this.forget.onclick = () =>{
+                that.tip.innerHTML = "提示：此功能暂未开放"
+            }
         }
         login(){
             var that = this;
@@ -33,7 +37,6 @@ define(() => {
                 },
                 type:"post",
                 success:function(res,status){
-                // console.log(JSON.parse(res))
                     that.res = JSON.parse(res);
                     that.load();
                 },
@@ -44,78 +47,31 @@ define(() => {
             })
         }
         load(){
-            if(this.res.code == 200 && this.res.msg == "登录成功"){
-                console.log(1)
+            if(this.res.code == 400 && this.res.msg == "账号不存在"){
+                this.tip.innerHTML = "提示：账号不存在";
+            }else if(this.res.code == 400 && this.res.msg == "密码错误"){
+                this.tip.innerHTML = "提示：密码错误";
+            }else if(this.res.code == 200 && this.res.msg == "登录成功"){
+                setCookie("user",this.telV)
                 location.href = "http://localhost/index/index.html";
             }
         }
     }
 
-
-
-
+    function setCookie(key, val, options) {
+        options = options || {};
+        var p = options.path ? ";path=" + options.path : "";
+        var e = "";
+        if (options.expires) {
+            var d = new Date();
+            d.setDate(d.getDate() + options.expires)
+            e = ";expires=" + d;
+        }
+        document.cookie = key + "=" + val + e + p;
+    }
     
 
 
     return UserLogin;
 
-//     function ajax(options){
-//         options = options || {};  
-//         options.type = options.type || "get";
-//         data = options.data || {}; 
-//         // 处理数据
-//         var str = "";
-//         for(var i in data){
-//             //str += `${i}=${data[i]}&`;  //IE不兼容反引号写法 ----update by 12-02
-// 　　　　　　　　　　　str = str + i + "=" + data[i] + "&";    9             }
-//         // 判断type类型拼接url
-//         if(options.type == "get" || options.type == "jsonp"){
-//             var d = new Date();
-//             //url = `${options.url}?${str}d=${d.getTime()}`; //IE不兼容反引号写法 ----update by 12-02
-// 　　　　　　　　　　　url = options.url + "?" + str + "_jwy" + "=" + d.getTime();          
-//         }else{
-//             url = options.url;
-//         }
-//         // console.log(`拼接后的url是${url}`);
-//         // 判断type类型走jsonp还是创建ajax
-//         if(options.type == "jsonp" ){
-//             var script = document.createElement("script");
-//             script.src = url;
-//             document.body.appendChild(script);
-//             // console.log(`走了jsonp的方法,url是${url}`)
-//             window[data[data.colmName]] = function(responseText){
-//                 options.success(responseText);
-//             }
-//         }else{
-//             var xhr;
-//             //兼容性
-//             if(window.XMLHttpRequest){
-//                 xhr = new XMLHttpRequest();
-//             }else if(window.ActiveObject){
-//                 xhr = new ActiveXobject('Microsoft.XMLHTTP');
-//             }
-//             // 发送请求
-//             if(options.type == "get"){
-//                 // console.log(`走了get的方法,url是${url}`)
-//                 xhr.open("get",url,true);
-//                 xhr.send(null)
-//             }else{
-//                 // console.log(`走了post的方法,url是${options.url},参数是${str}`)
-//                 xhr.open("post",url,true);
-//                 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-//                 xhr.send(str.slice(0,str.length-1));
-//             }
-//             // 接收数据
-//             xhr.onreadystatechange = function(){
-//                 if(xhr.readyState == 4){
-//                     var status = xhr.status;
-//                     if(xhr.readyState == 4 && xhr.status == 200){
-//                         options.success(xhr.responseText,xhr.status);
-//                     }else{
-//                         options.error(xhr.responseText,xhr.status)
-//                     }
-//                 }
-//             }
-//         }
-//     }
 });

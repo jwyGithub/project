@@ -43,7 +43,6 @@ http.createServer((req, res) => {
 		} else if (urlObj.pathname == "/common/search") {
 			searchApi(req, res);
 		}
-
 	}
 
 }).listen("81", "127.0.0.1");
