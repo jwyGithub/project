@@ -141,43 +141,48 @@ header {
   border: 1px solid #eee;
   position: relative; }
   .buy .box {
-    float: left;
-    height: 400px; }
+    width: 320px;
+    position: absolute;
+    left: 0;
+    top: 20px; }
     .buy .box .small {
-      position: absolute;
+      position: relative;
       width: 320px;
-      height: 320px;
-      margin-top: 40px; }
+      height: 320px; }
       .buy .box .small img {
-        width: 320px;
-        height: 320px; }
-      .buy .box .small > span {
+        width: 320px; }
+      .buy .box .small #magnifier {
         position: absolute;
-        background: gray;
+        background: grey;
         opacity: .6;
         left: 0;
         top: 0;
-        z-index: 999; }
+        display: none; }
     .buy .box .big {
-      border: 1px solid #000;
-      position: absolute;
-      display: none;
-      left: 300px;
-      top: 0;
-      overflow: hidden;
+      display: block;
       width: 320px;
       height: 320px;
-      z-index: 99999; }
+      position: absolute;
+      top: 0;
+      left: 360px;
+      z-index: 1;
+      overflow: hidden; }
       .buy .box .big img {
-        position: absolute;
-        width: 600px;
-        height: 600px; }
-    .buy .box .smallimg {
+        width: 960px;
+        height: 960px;
+        position: absolute; }
+    .buy .box .items {
       text-align: center;
-      margin-top: 40px; }
-      .buy .box .smallimg img {
-        max-width: 48px;
-        max-height: 48px; }
+      width: 320px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; }
+      .buy .box .items li {
+        float: left; }
+        .buy .box .items li a img {
+          max-width: 48px;
+          max-height: 48px;
+          border-width: 2px; }
   .buy .right {
     position: absolute;
     left: 320px;

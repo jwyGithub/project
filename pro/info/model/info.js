@@ -53,21 +53,26 @@ define(() => {
         }
         move(e) {
             // span的位置计算 
-            var spanL = e.clientX - this.small.offsetLeft - this.span.offsetWidth / 2;
-            var spanT = e.clientY - this.small.offsetTop - this.span.offsetHeight / 2;
+            var spanT = e.clientY - this.span.offsetHeight - this.span.offsetHeight - this.span.offsetHeight / 2;
+            var spanL = e.clientX - this.span.offsetWidth - this.span.offsetWidth / 2;
+
             // 边界限定
             // 左边限定
-            // if(spanL < 0){spanL = 0;}
+            if (spanL < 0) {
+                spanL = 0;
+            }
             // 上边限定
-            // if(spanT < 0){spanT = 0};
+            if (spanT < 0) {
+                spanT = 0;
+            };
             // 右边限定
-            // if(spanL > this.small.offsetWidth - this.span.offsetWidth){
-            //     spanL = this.small.offsetWidth - this.sSpanW;
-            // }
+            if (spanL > this.small.offsetWidth - this.span.offsetWidth) {
+                spanL = this.small.offsetWidth - this.sSpanW;
+            }
             // 下边限定
-            // if(spanT > this.small.offsetHeight - this.sSpanH){
-            //     spanT = this.small.offsetHeight - this.sSpanH;
-            // }
+            if (spanT > this.small.offsetHeight - this.sSpanH) {
+                spanT = this.small.offsetHeight - this.sSpanH;
+            }
             // 设置span的位置
             // console.log("---e.clientX-----" + e.clientX,"---e.offsetLeft-----"  + this.small.offsetLeft ,"---e.offsetWidth-----" + this.span.offsetWidth/2)
             this.span.style.left = spanL + "px";

@@ -168,53 +168,57 @@ header{
     border: 1px solid #eee;
     position: relative;
     .box{
-        float: left;
-        // position: relative;
-        height:400px;
-        // margin-top: 40px;
+        width: 320px;
+        position: absolute;
+        left: 0;
+        top: 20px;
         .small{
-            position: absolute;
-            width:320px;
-            height:320px;
-            margin-top: 40px;
+            position: relative;
+            width: 320px;
+            height: 320px;
             img{
                 width: 320px;
-                height: 320px;
-                // background: red;
             }
-            > span{
+            #magnifier{
                 position: absolute;
-                background: gray;
+                background: grey; 
                 opacity: .6;
                 left:0;
                 top:0;
-                // display: none;
-                z-index: 999;
+                display: none;
             }
         }
         .big{
-            border: 1px solid #000;
+            display: block;
+            width: 320px;
+            height: 320px;
+            // border: 1px solid red;
             position: absolute;
-            display: none;
-            left: 300px;
-            top:0;
+            top: 0;
+            left: 360px;
+            z-index: 1;
             overflow: hidden;
-            width:320px;
-            height:320px;
-            z-index: 99999;
             img{
+                width: 960px;
+                height: 960px;
                 position: absolute;
-                width: 600px;
-                height: 600px;
-
             }
         }
-        .smallimg{
+        .items{
             text-align: center;
-            margin-top: 40px;
-            img{
-                max-width: 48px;
-                max-height: 48px;
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            li{
+                float: left;
+                a{
+                    img{
+                        max-width: 48px;
+                        max-height: 48px;
+                        border-width: 2px;
+                    }
+                }
             }
         }
     }

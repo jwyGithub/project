@@ -1,0 +1,210 @@
+html {
+  max-width: 100%; }
+
+body {
+  min-width: 1200px; }
+
+.margin {
+  width: 1200px;
+  margin: 0 auto; }
+
+nav {
+  background: #fafafa;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f0f0f0; }
+
+nav > .margin {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0 5px; }
+
+nav .left a {
+  margin: 0 5px; }
+
+nav .right ul li {
+  float: left;
+  margin: 0 5px; }
+
+.process {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .process img {
+    vertical-align: middle; }
+  .process .ncc-flow {
+    font-size: 0;
+    *word-spacing: -1px;
+    width: 640px;
+    height: 70px;
+    margin: 15px 0; }
+    .process .ncc-flow li {
+      font-size: 12px;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal;
+      display: inline-block;
+      width: 25%;
+      height: 70px;
+      position: relative;
+      z-index: 1; }
+      .process .ncc-flow li i {
+        background: #FFF url(../imgs/step.gif) no-repeat;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 50%; }
+      .process .ncc-flow li i.step1 {
+        background-position: 0 -30px; }
+      .process .ncc-flow li i.step2 {
+        background-position: -30px 0; }
+      .process .ncc-flow li i.step3 {
+        background-position: -60px 0; }
+      .process .ncc-flow li i.step4 {
+        background-position: -90px 0; }
+      .process .ncc-flow li p {
+        color: #CCC;
+        text-align: center;
+        width: 100%;
+        height: 24px;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        overflow: hidden; }
+      .process .ncc-flow li sub {
+        background-color: #FFF;
+        width: 5px;
+        height: 5px;
+        margin-left: -3px;
+        border: solid 1px #CCC;
+        border-radius: 4px;
+        position: absolute;
+        z-index: 2;
+        top: 38px;
+        left: 50%; }
+      .process .ncc-flow li .hr {
+        background-color: #DDD;
+        width: 100%;
+        height: 1px;
+        border: none 0;
+        position: absolute;
+        z-index: 1;
+        top: 29px;
+        left: 0; }
+
+.car h3 {
+  font: lighter 24px/30px arial,"microsoft yahei";
+  color: #555;
+  margin: 20px 0; }
+
+.car h5 {
+  font: 12px/20px arial,"microsoft yahei";
+  color: #fa8801;
+  clear: both;
+  margin-bottom: 5px; }
+
+.car .list .title {
+  background: #f9f9f9; }
+  .car .list .title ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .car .list .title ul li {
+      flex: 1;
+      text-align: center;
+      font-size: 1em;
+      line-height: 42px;
+      color: #666; }
+      .car .list .title ul li:nth-child(2) {
+        flex: 3; }
+
+.car .list .price {
+  text-align: right;
+  background: #f9f9f9; }
+  .car .list .price span {
+    font: normal 16px/54px "microsoft yahei", Arial;
+    margin-right: 20px; }
+  .car .list .price a {
+    font: normal 16px/20px arial,"microsoft yahei";
+    color: #777;
+    background-color: #F5F5F5;
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    padding: 6px 20px;
+    border: solid 1px;
+    cursor: pointer;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #2F96B4;
+    margin-right: 20px; }
+    .car .list .price a:hover {
+      background-color: #2F96B4;
+      border-color: #2A87A2 #2A87A2 #237087 #2A87A2; }
+
+.car .list .goods ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .car .list .goods ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+    line-height: 76px;
+    color: #666; }
+    .car .list .goods ul li:nth-child(2) {
+      flex: 3; }
+  .car .list .goods ul li.con {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .car .list .goods ul li.con input {
+      margin: 0 10px;
+      width: 15px;
+      font: 12px/15px Tahoma;
+      background-color: #FFF;
+      height: 15px;
+      padding: 2px 4px;
+      border: solid 1px #CCC;
+      outline: 0 none; }
+    .car .list .goods ul li.con a {
+      border-color: #DCDCDC #DCDCDC #B3B3B3 #DCDCDC;
+      cursor: pointer;
+      border: solid 1px;
+      font: 14px/14px Arial;
+      color: #777;
+      background-color: #F5F5F5;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-block;
+      width: 14px;
+      height: 14px; }
+
+.footer {
+  text-align: center;
+  font-size: 12px !important;
+  border-top: 1px solid #e7e7e7;
+  padding-bottom: 10px;
+  overflow: hidden;
+  background: #F5F5F5;
+  width: 100%;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0; }
+  .footer p {
+    margin: 10px 0; }
+  .footer span {
+    margin: 0 5px; }
