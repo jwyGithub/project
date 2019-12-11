@@ -5,12 +5,11 @@ require.config({
 	}
 })
 
-require(["jq","login"],(_,Userlogin)=>{
+require(["jq","car"],(_,car)=>{
+
+	new car();
+
 
 	
-	new Userlogin();
-	
-
-
 
 })

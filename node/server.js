@@ -42,6 +42,8 @@ http.createServer((req, res) => {
 			regApi(req, res);
 		} else if (urlObj.pathname == "/common/search") {
 			searchApi(req, res);
+		} else if (urlObj.pathname == "/common/details") {
+			detailsApi(req, res);
 		}
 	}
 
@@ -134,14 +136,6 @@ function searchApi(req, res) {
 			res.end(err)
 		} else {
 			let l = JSON.parse(data);
-
-			// {
-			// 	"goodsId":1,
-			// 	"imgurl":"http://localhost:82/imgs/listImg/list-1.jpg",
-			// 	"title":"《幼儿画报课堂》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。读者...",
-			// 	"keyword":"幼儿画报",
-			// 	"price":"¥360.00"
-			// }
 			var str = "";
 			//判断接收到的keyword是否和json文件的title符合
 			for (var i = 0; i < l.list.length; i++) {
@@ -158,10 +152,35 @@ function searchApi(req, res) {
 
 				}
 			}
-			str1 = str.slice(0,str.length-1)
+			str1 = str.slice(0, str.length - 1)
 			listStr = `[${str1}]`
-			console.log(listStr)
+			// console.log(listStr)
 			res.end(listStr)
+		}
+	})
+}
+
+// 详情接口
+function detailsApi(req, res) {
+	fs.readFile('data/details.json', 'utf-8', (err, data) => {
+		if (err) {
+			res.end(err)
+		} else {
+			let urlObj = url.parse(req.url, true);
+			console.log("---------------details-----------")
+			console.log(" 接收到的商品id是" + urlObj.query.goodsId)
+			// 解析所有商品
+			let goodList = JSON.parse(data)
+			console.log(goodList)
+			for (var i = 0; i < goodList.details.length; i++) {
+				// console.log( goodList.details[i].id == urlObj.query.goodsId)
+				if(goodList.details[i].id == urlObj.query.goodsId){
+					// res.end(`${goodList.details[i]}`)
+					// console.log(`${goodList.details[i]}`)
+					let goods = JSON.stringify(goodList.details[i])
+					res.end(goods)
+				}
+			}
 		}
 	})
 }

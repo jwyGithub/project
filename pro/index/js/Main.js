@@ -34,6 +34,7 @@ require(["jq", "index", "banner"], (_, index, banner) => {
 	new banner({
 		banner: $(".four").find(".imgbox").find("img"),
 		delaytime: 5200,
-		movetime: 1000
+		movetime: 1200
+
 	});
 });

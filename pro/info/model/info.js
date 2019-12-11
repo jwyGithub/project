@@ -103,5 +103,172 @@ define(() => {
         }
     }
 
-    return info;
+    // 获取详情
+    class Car {
+        constructor() {
+            this.init();
+        }
+        init() {
+            this.id = getCookie("goodsId", { path: '/' });
+            this.load();
+            this.addEvent();
+        }
+        load() {
+            var that = this;
+            // http://localhost:81/common/login
+            $.ajax({
+                url: "http://localhost:81/common/details",
+                data: {
+                    "goodsId": that.id
+                },
+                success: function (res) {
+                    // console.log(res)
+                    that.res = JSON.parse(res);
+                    // console.log(that.res)
+                    that.display();
+                }
+            });
+        }
+        display() {
+            // 放大镜渲染
+            let str = "";
+            for (var i = 0; i < this.res.imgs.length; i++) {
+                str += `<li><a href="#"><img src="${this.res.imgs[i]}" alt=""></a></li>`;
+            }
+            $(".box").html(`<div class="small">
+                            <img src="${this.res.imgs[0]}">
+                            <span id="magnifier"></span>
+                        </div>
+                        <div class="big">
+                            <img src="${this.res.imgs[0]}" alt="">
+                        </div>
+                        <ul class="items clearfix">
+                            ${str}
+                        </ul>`);
+            $(".price").html(this.res.price);
+            $(".right").find("h3").html(this.res.title).attr("id", this.res.id);
+            $(".overmore").html(this.res.info);
+        }
+        addEvent() {
+            // 起刊日期class
+            var date = $(".date").find("dd");
+            date.click(function () {
+                $(this).addClass('checked').siblings().removeClass("checked");
+            });
+            // 订阅年数
+            var date = $(".year").find("dd");
+            date.click(function () {
+                $(this).addClass('checked').siblings().removeClass("checked");
+            });
+
+            $("#addCar").click(eve => {
+                var e = eve || window.event;
+                e.preventDefault();
+                let user = getCookie("user");
+                // console.log(user)
+                if (!user) {
+                    console.log("未登录");
+                } else {
+                    // 获取选择的值
+                    var d = document.querySelectorAll(".date dd");
+                    for (let i = 0; i < d.length; i++) {
+                        if (d[i].className == "checked") {
+                            var date = d[i].innerHTML;
+                        }
+                    }
+                    var y = document.querySelectorAll(".year dd");
+                    for (let i = 0; i < y.length; i++) {
+                        if (y[i].className == "checked") {
+                            var year = y[i].innerHTML;
+                        }
+                    }
+
+                    this.goodItems = getCookie("details") ? JSON.parse(getCookie("details")) : [];
+                    // 判断是否第一次加入购物车
+                    if (this.goodItems.length < 1) {
+                        var goodsId = $(".right").find("h3").attr("id");
+                        this.goodItems.push({
+                            id: goodsId,
+                            img: $(".small").find("img").attr("src"),
+                            title: $(".right").find("h3").html(),
+                            pubDate: date,
+                            pubYear: year,
+                            price: $(".price").text(),
+                            number: $("#num").val()
+                        });
+                        // 不是就走这里
+                    } else {
+                        console.log(this.goodItems.length);
+                        console.log("走了else");
+                        var onoff = true;
+                        for (var i = 0; i < this.goodItems.length; i++) {
+                            if (this.goodItems[i].id === goodsId) {
+                                this.goodItems[i].number++;
+                                onoff = false;
+                            }
+                        }
+                        var i = 0;
+                        var onoff = this.goodItems.some((val, idx) => {
+                            i = idx;
+                            return val.id === this.id;
+                        });
+                        // 新商品, 增加
+                        if (!onoff) {
+                            this.goodItems.push({
+                                id: goodsId,
+                                num: 1
+                            });
+                        } else {
+                            this.goodItems[i].number++;
+                        }
+                    }
+                    setCookie("details", JSON.stringify(this.goodItems), {
+                        path: "/"
+                    });
+                    location.href = "http://localhost/car/car.html";
+                }
+            });
+        }
+
+    }
+
+    //获取cookie
+    function getCookie(key) {
+        var arr = document.cookie.split("; ");
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].split("=")[0] == key) {
+                return arr[i].split("=")[1];
+            }
+        }
+        return "";
+    }
+
+    //删除cookie
+    function removeCookie(key, options) {
+        options = options || {};
+        setCookie(key, null, {
+            expires: -1,
+            path: options.path
+        });
+    }
+
+    //设置cookie
+    function setCookie(key, val, options) {
+        options = options || {};
+        var p = options.path ? ";path=" + options.path : "";
+        var e = "";
+        if (options.expires) {
+            var d = new Date();
+            d.setDate(d.getDate() + options.expires);
+            e = ";expires=" + d;
+        }
+        document.cookie = key + "=" + val + e + p;
+    }
+
+    let option = {
+        banner: info,
+        detail: Car
+    };
+
+    return option;
 });

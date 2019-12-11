@@ -1,0 +1,37 @@
+{
+    "details":[
+        {
+            "id":1,
+            "title":"幼儿画报课堂",
+            "type":"幼儿画报",
+            "info":"《幼儿画报课堂》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。读者...",
+            "price":"¥360.00",
+            "imgs":[
+                "http://localhost:82/imgs/details/1-01.jpg",
+                "http://localhost:82/imgs/details/1-02.jpg",
+                "http://localhost:82/imgs/details/1-03.jpg",
+                "http://localhost:82/imgs/details/1-04.jpg"
+            ]
+        },
+        {
+            "id":2,
+            "title":"幼儿画报（此杂志不参与订送活动）",
+            "type":"幼儿画报",
+            "info":"《幼儿画报》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。",
+            "price":"¥720.00",
+            "imgs":[
+               "http://localhost:82/imgs/details/2-01.jpg"
+            ]    
+        },
+        {
+            "id":3,
+            "title":"幼儿画报绘本版",
+            "type":"幼儿画报",
+            "info":"",
+            "price":"¥240.00",
+            "imgs":[
+                "http://localhost:82/imgs/details/3-01.png"
+            ]
+        }
+    ]
+}

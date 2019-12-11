@@ -5,7 +5,7 @@ require.config({
 	}
 });
 
-require(["jq", "listinfo"], (_, info) => {
+require(["jq", "list"], (_, info) => {
 
 	new info();
 });

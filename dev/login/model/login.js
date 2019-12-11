@@ -52,7 +52,9 @@ define(() => {
             }else if(this.res.code == 400 && this.res.msg == "密码错误"){
                 this.tip.innerHTML = "提示：密码错误";
             }else if(this.res.code == 200 && this.res.msg == "登录成功"){
-                setCookie("user",this.telV)
+                setCookie("user",this.telV,{
+                    path:"/"
+                })
                 location.href = "http://localhost/index/index.html";
             }
         }

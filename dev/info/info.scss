@@ -178,6 +178,7 @@ header{
             height: 320px;
             img{
                 width: 320px;
+                height: 320px;
             }
             #magnifier{
                 position: absolute;
@@ -189,7 +190,7 @@ header{
             }
         }
         .big{
-            display: block;
+            display: none;
             width: 320px;
             height: 320px;
             // border: 1px solid red;
@@ -208,7 +209,7 @@ header{
             text-align: center;
             width: 320px;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             margin-top: 20px;
             li{
                 float: left;
@@ -272,6 +273,9 @@ header{
                 line-height: 35px;
                 cursor: pointer;
                 border: 1px solid #666;
+            }
+            dd.checked{
+                border: 2px solid #F87622;
             }
         }
         .add{

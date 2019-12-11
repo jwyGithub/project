@@ -150,7 +150,8 @@ header {
       width: 320px;
       height: 320px; }
       .buy .box .small img {
-        width: 320px; }
+        width: 320px;
+        height: 320px; }
       .buy .box .small #magnifier {
         position: absolute;
         background: grey;
@@ -159,7 +160,7 @@ header {
         top: 0;
         display: none; }
     .buy .box .big {
-      display: block;
+      display: none;
       width: 320px;
       height: 320px;
       position: absolute;
@@ -175,7 +176,7 @@ header {
       text-align: center;
       width: 320px;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       margin-top: 20px; }
       .buy .box .items li {
         float: left; }
@@ -236,6 +237,8 @@ header {
         line-height: 35px;
         cursor: pointer;
         border: 1px solid #666; }
+      .buy .right dl dd.checked {
+        border: 2px solid #F87622; }
     .buy .right .add {
       margin-top: 20px;
       font: 14px/50px "";
