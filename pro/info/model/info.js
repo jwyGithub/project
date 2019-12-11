@@ -212,6 +212,7 @@ define(() => {
                         });
                         // 新商品, 增加
                         if (!onoff) {
+                            var goodsId = $(".right").find("h3").attr("id");
                             this.goodItems.push({
                                 id: goodsId,
                                 img: $(".small").find("img").attr("src"),

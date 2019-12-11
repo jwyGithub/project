@@ -12,7 +12,13 @@ define(() => {
             this.fourfr = document.querySelector(".fourFright");
             this.search = document.getElementById("search");
             this.keyword = document.getElementById("keyword");
-
+            this.list = document.querySelectorAll(".list");
+            var aimg = document.querySelectorAll("img[lazySrc]");
+            this.aA = document.querySelectorAll("a")
+            this.clientH = document.documentElement.clientHeight;
+            this.logout = document.getElementById("logout");
+            this.wel = document.querySelector(".wel")
+            this.arr = Array.from(aimg);
             this.init();
         }
         init() {
@@ -28,6 +34,31 @@ define(() => {
                 that.setCookie();
             }
 
+            this.logout.onclick = function () {
+                removeCookie("user",{
+                    path:"/"
+                })
+                removeCookie("details",{
+                    path:"/"
+                })
+                removeCookie("goodsId",{
+                    path:"/"
+                })
+                removeCookie("keyword",{
+                    path:"/"
+                })
+                location.href = "http://localhost/login/login.html"
+            }
+
+
+            for (let i = 0; i < this.list.length; i++) {
+                $(this.list[i]).hover(function () {
+                    $(that.list[i]).children(".items").show();
+                }, function () {
+                    $(that.list[i]).children(".items").hide();
+                })
+            }
+
             // 点击热门搜索关键词
             var a = $(".seaKeyword").find("dd").find("a");
             for (let i = 0; i < a.length; i++) {
@@ -38,7 +69,49 @@ define(() => {
                     location.href = "http://localhost/list/list.html";
                 }
             }
+
+            $(".linkfloor li").click(function () {
+                var i = $(this).index();
+                var t = $(".floorstyle").eq(i).offset().top;
+                $("html").animate({
+                    scrollTop: t
+                })
+            })
+
+       
+            this.userInfo();
+            this.lazyLoad();
             this.load();
+            this.scroll();
+        }
+        scroll() {
+            var that = this;
+            onscroll = function () {
+                that.lazyLoad();
+            }
+        }
+        lazyLoad() {
+            var scrollT = document.documentElement.scrollTop;
+            for (var i = 0; i < this.arr.length; i++) {
+                if (this.arr[i].offsetTop - this.clientH < scrollT) {
+                    this.arr[i].src = this.arr[i].getAttribute("lazySrc");
+                    // console.log(this.arr[i].src)
+                    this.arr.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        
+        userInfo() {
+            this.user = getCookie("user");
+            this.wel.innerHTML = `杂志网欢迎${this.user}`
+            if (!this.user) {
+                $(".top2").hide();
+                $(".top").show();
+            } else {
+                $(".top2").show();
+                $(".top").hide();
+            }
         }
         load() {
             var that = this;
@@ -144,9 +217,29 @@ define(() => {
         document.cookie = key + "=" + val + e + p;
     }
 
+    //获取cookie
+    function getCookie(key) {
+        var arr = document.cookie.split("; ");
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].split("=")[0] == key) {
+                return arr[i].split("=")[1];
+            }
+        }
+        return "";
+    }
 
 
+    //删除cookie
+    function removeCookie(key, options) {
+        options = options || {};
+        setCookie(key, null, {
+            expires: -1,
+            path: options.path
+        })
+    }
 
+
+    
 
 
 

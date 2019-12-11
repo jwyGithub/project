@@ -1,7 +1,7 @@
 define(() => {
     class Banner {
         constructor(options) {
-            this.items = options.banner || "";
+            this.items = options.banner || {};
             this.delaytime = options.delaytime || 5000;
             this.movetime = options.movetime || 2000;
             this.left = document.getElementById("left");
@@ -19,14 +19,14 @@ define(() => {
                 top: 0
             }).eq(this.index).css({
                 left: 0
-            })
-            this.left.onclick = () =>{
-                console.log(111)
+            });
+            this.left.onclick = () => {
+                console.log(111);
                 that.btnL();
-            }
-            this.right.onclick = () =>{
+            };
+            this.right.onclick = () => {
                 that.btnR();
-            }
+            };
             this.autoplay();
         }
         btnL() {
@@ -42,11 +42,11 @@ define(() => {
             //开始移动
             this.move(1);
         }
-        btnR(){
+        btnR() {
             //下一个
             if (this.index == this.items.length - 1) {
                 this.index = 0;
-                this.iPrev = this.items.length - 1
+                this.iPrev = this.items.length - 1;
             } else {
                 this.index++;
                 this.iPrev = this.index - 1;
@@ -55,21 +55,21 @@ define(() => {
         }
         move(type) {
             this.items.eq(this.iPrev).css({
-                left:0
+                left: 0
             }).stop().animate({
-				left:this.items.eq(0).width() * type
-			},this.movetime).end().eq(this.index).css({
-				left:-this.items.eq(0).width() * type
-			}).stop().animate({
-				left:0
-			},this.movetime);
+                left: this.items.eq(0).width() * type
+            }, this.movetime).end().eq(this.index).css({
+                left: -this.items.eq(0).width() * type
+            }).stop().animate({
+                left: 0
+            }, this.movetime);
         }
         //自动播放
-        autoplay(){
+        autoplay() {
             var that = this;
-            this.t = setInterval(()=>{
+            this.t = setInterval(() => {
                 that.btnR();
-            },that.delaytime)
+            }, that.delaytime);
         }
 
     }

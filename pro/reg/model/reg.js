@@ -43,9 +43,12 @@ define(() => {
             });
         }
         load() {
-            console.log(this.res);
+            if(this.res.msg == "注册成功"){
+                location.href ="http://localhost/login/login.html"
+            }
         }
     }
+
 
     return Reg;
 });

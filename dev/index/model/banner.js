@@ -1,7 +1,7 @@
 define(() => {
     class Banner {
         constructor(options) {
-            this.items = options.banner || "";
+            this.items = options.banner || {};
             this.delaytime = options.delaytime || 5000;
             this.movetime = options.movetime || 2000;
             this.left = document.getElementById("left");

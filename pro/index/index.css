@@ -184,13 +184,16 @@ header {
         left: 232px;
         top: 0;
         width: 300px;
-        background: #fff; }
+        background: #fff;
+        display: none; }
         .menu > ul > li.list .items a {
           float: left;
           width: 33%;
           text-align: center;
           line-height: 60px;
           border-bottom: 1px dashed gray; }
+      .menu > ul > li.list .active .items {
+        display: block; }
   .menu .login {
     position: absolute;
     z-index: 99999;
@@ -209,6 +212,20 @@ header {
         font-weight: normal;
         font-family: "";
         line-height: 24px; }
+    .menu .login .top2 {
+      display: none;
+      height: 139px;
+      text-align: center; }
+      .menu .login .top2 img {
+        width: 65px;
+        margin: 5px 0;
+        border-radius: 50%; }
+      .menu .login .top2 p {
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "";
+        line-height: 30px;
+        text-align: center; }
     .menu .login .btns {
       border-style: solid;
       border-width: 1px;
@@ -267,6 +284,22 @@ header {
       border-style: solid;
       border-width: 1px;
       border-color: #555; }
+
+.linkfloor {
+  width: 40px;
+  height: 204px;
+  position: fixed;
+  left: 20px;
+  top: 50%; }
+  .linkfloor li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    border: 2px solid #b6b6b6;
+    border-top: 1px solid #b6b6b6; }
 
 .wrapper {
   overflow: hidden;

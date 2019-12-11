@@ -153,10 +153,16 @@ nav .right ul li {
       background-color: #2F96B4;
       border-color: #2A87A2 #2A87A2 #237087 #2A87A2; }
 
+.car .list .msg {
+  font: 700 20px/20px "";
+  color: red;
+  display: none; }
+
 .car .list .goods ul {
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 1px solid #f9f9f9; }
   .car .list .goods ul li {
     flex: 1;
     text-align: center;
@@ -164,7 +170,13 @@ nav .right ul li {
     line-height: 76px;
     color: #666; }
     .car .list .goods ul li:nth-child(2) {
-      flex: 3; }
+      flex: 3;
+      display: flex;
+      align-self: auto; }
+      .car .list .goods ul li:nth-child(2) img {
+        margin-left: 40px; }
+      .car .list .goods ul li:nth-child(2) a {
+        margin-left: 20px; }
     .car .list .goods ul li img {
       max-width: 85px;
       max-height: 85px; }

@@ -212,11 +212,17 @@ nav{
                 }
             }
         }
+        .msg{
+            font: 700 20px/20px "";
+            color: red;
+            display: none;
+        }
         .goods{
             ul{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                border-bottom: 1px solid #f9f9f9;;
                 li{
                     flex: 1;
                     text-align: center;
@@ -225,6 +231,14 @@ nav{
                     color: #666;
                     &:nth-child(2){
                         flex: 3;
+                        display: flex;
+                        align-self: auto;
+                        img{
+                            margin-left: 40px;
+                        }
+                        a{
+                            margin-left: 20px;
+                        }
                     }
                     img{
                         max-width: 85px;
