@@ -226,6 +226,10 @@ nav{
                     &:nth-child(2){
                         flex: 3;
                     }
+                    img{
+                        max-width: 85px;
+                        max-height: 85px;
+                    }
                 }
                 li.con{
                     display: flex;

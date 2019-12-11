@@ -198,8 +198,6 @@ define(() => {
                         });
                         // 不是就走这里
                     } else {
-                        console.log(this.goodItems.length);
-                        console.log("走了else");
                         var onoff = true;
                         for (var i = 0; i < this.goodItems.length; i++) {
                             if (this.goodItems[i].id === goodsId) {
@@ -216,7 +214,12 @@ define(() => {
                         if (!onoff) {
                             this.goodItems.push({
                                 id: goodsId,
-                                num: 1
+                                img: $(".small").find("img").attr("src"),
+                                title: $(".right").find("h3").html(),
+                                pubDate: date,
+                                pubYear: year,
+                                price: $(".price").text(),
+                                number: $("#num").val()
                             });
                         } else {
                             this.goodItems[i].number++;

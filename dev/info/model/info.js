@@ -180,7 +180,7 @@ define(() => {
                             var year = y[i].innerHTML
                         }
                     }
-                    
+
                     this.goodItems = getCookie("details") ? JSON.parse(getCookie("details")) : [];
                     // 判断是否第一次加入购物车
                     if (this.goodItems.length < 1) {
@@ -196,8 +196,6 @@ define(() => {
                         })
                         // 不是就走这里
                     } else {
-                        console.log(this.goodItems.length)
-                        console.log("走了else")
                         var onoff = true;
                         for (var i = 0; i < this.goodItems.length; i++) {
                             if (this.goodItems[i].id === goodsId) {
@@ -214,7 +212,12 @@ define(() => {
                         if (!onoff) {
                             this.goodItems.push({
                                 id: goodsId,
-                                num: 1
+                                img: $(".small").find("img").attr("src"),
+                                title: $(".right").find("h3").html(),
+                                pubDate: date,
+                                pubYear: year,
+                                price: $(".price").text(),
+                                number: $("#num").val()
                             })
                         } else {
                             this.goodItems[i].number++;
