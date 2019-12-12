@@ -1,6 +1,14 @@
-define(() => {
-    class Info {
-        constructor() {
+"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+define(function () {
+    var Info = function () {
+        function Info() {
+            _classCallCheck(this, Info);
+
             this.goods = document.querySelector(".goodslist");
             this.keyword = document.getElementById("keyword");
             this.search = document.getElementById("search");
@@ -9,91 +17,101 @@ define(() => {
             this.init();
             this.addEvent();
         }
-        init() {
-            var that = this;
-            // 获取从首页设置的keyword
-            this.key = getCookie("keyword");
-            // 点击搜索事件
-            this.search.onclick = function () {
-                that.key = that.keyword.value;
-                that.load();
-            };
-            // 点击热门搜索关键词
-            var a = $(".seaKeyword").find("dd").find("a");
-            for (let i = 0; i < a.length; i++) {
-                a[i].onclick = function () {
-                    that.key = a[i].innerHTML;
-                    that.keyword.value = a[i].innerHTML;
+
+        _createClass(Info, [{
+            key: "init",
+            value: function init() {
+                var that = this;
+                // 获取从首页设置的keyword
+                this.key = getCookie("keyword");
+                // 点击搜索事件
+                this.search.onclick = function () {
+                    that.key = that.keyword.value;
                     that.load();
                 };
-            }
-            // 从页面跳转后就加载一次
-            if (this.key == "") {
-                return;
-            }
-            that.load();
-        }
-        addEvent() {
-            this.aLi.addEventListener("click", function (eve) {
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                // if(target.tagName == "LI"){
-                //     var t = target;
-                // }
-                if (target.className == "overmore") {
+                // 点击热门搜索关键词
+                var a = $(".seaKeyword").find("dd").find("a");
 
-                    setCookie("goodsId", target.parentElement.id, {
-                        path: "/"
-                    });
-                    location.href = "http://localhost/info/info.html";
+                var _loop = function _loop(i) {
+                    a[i].onclick = function () {
+                        that.key = a[i].innerHTML;
+                        that.keyword.value = a[i].innerHTML;
+                        that.load();
+                    };
+                };
+
+                for (var i = 0; i < a.length; i++) {
+                    _loop(i);
                 }
-            });
-        }
-        load() {
-            // 请求数据
-            var that = this;
-            if (that.key == "") {
-                return;
-            }
-            $.ajax({
-                url: "http://localhost:81/common/search",
-                data: {
-                    key: that.key
-                },
-                success: function (res) {
-                    that.res = JSON.parse(res);
-                    that.display();
-                },
-                error: function (res) {
-                    that.res = res;
+                // 从页面跳转后就加载一次
+                if (this.key == "") {
+                    return;
                 }
-            });
-        }
-        //渲染界面
-        display() {
-            var str = "";
-            for (var i = 0; i < this.res.length; i++) {
-                str += `<li id="${this.res[i].goodsId}">
-                            <img src="${this.res[i].imgurl}" >
-                            <div class="items">
-                                <img src="${this.res[i].imgurl}" alt="">
-                            </div>
-                            <p class="overmore">${this.res[i].title}</p>
-                            <div class="price">${this.res[i].price}</div>
-                        </li>`;
+                that.load();
             }
-            // console.log(str)
-            // 增加数据为空判断
-            if (str == "") {
-                this.goods.innerHTML = `
-                <span>没有找到符合条件的商品</span>`;
-            } else {
-                this.goods.innerHTML = str;
+        }, {
+            key: "addEvent",
+            value: function addEvent() {
+                this.aLi.addEventListener("click", function (eve) {
+                    var e = eve || window.event;
+                    var target = e.target || e.srcElement;
+                    // if(target.tagName == "LI"){
+                    //     var t = target;
+                    // }
+                    if (target.className == "overmore") {
+
+                        setCookie("goodsId", target.parentElement.id, {
+                            path: "/"
+                        });
+                        location.href = "http://localhost/info/info.html";
+                    }
+                });
             }
-            // 清除cookie
-            // removeCookie("keyword", { path: "/" })
-        }
-    }
+        }, {
+            key: "load",
+            value: function load() {
+                // 请求数据
+                var that = this;
+                if (that.key == "") {
+                    return;
+                }
+                $.ajax({
+                    url: "http://localhost:81/common/search",
+                    data: {
+                        key: that.key
+                    },
+                    success: function success(res) {
+                        that.res = JSON.parse(res);
+                        that.display();
+                    },
+                    error: function error(res) {
+                        that.res = res;
+                    }
+                });
+            }
+            //渲染界面
+
+        }, {
+            key: "display",
+            value: function display() {
+                var str = "";
+                for (var i = 0; i < this.res.length; i++) {
+                    str += "<li id=\"" + this.res[i].goodsId + "\">\n                            <img src=\"" + this.res[i].imgurl + "\" >\n                            <div class=\"items\">\n                                <img src=\"" + this.res[i].imgurl + "\" alt=\"\">\n                            </div>\n                            <p class=\"overmore\">" + this.res[i].title + "</p>\n                            <div class=\"price\">" + this.res[i].price + "</div>\n                        </li>";
+                }
+                // console.log(str)
+                // 增加数据为空判断
+                if (str == "") {
+                    this.goods.innerHTML = "\n                <span>没有找到符合条件的商品</span>";
+                } else {
+                    this.goods.innerHTML = str;
+                }
+                // 清除cookie
+                // removeCookie("keyword", { path: "/" })
+            }
+        }]);
+
+        return Info;
+    }();
 
     function getCookie(key) {
         var arr = document.cookie.split("; ");
