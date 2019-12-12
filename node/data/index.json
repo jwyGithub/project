@@ -64,21 +64,21 @@
         {
             "hotid": 27,
             "type": "热门推荐",
-            "imgurl": "http://localhost:82/imgs/indexImg/2f/3f-r-1.jpg",
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-1.jpg",
             "name": "中国国家地理",
             "price": "780.00"
         },
         {
             "hotid": 33,
             "type": "热门推荐",
-            "imgurl": "http://localhost:82/imgs/indexImg/2f/4f-r-1.jpg",
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-1.jpg",
             "name": "瑞丽美容服饰",
             "price": "130.00"
         },
         {
             "hotid": 35,
             "type": "热门推荐",
-            "imgurl": "http://localhost:82/imgs/indexImg/2f/4f-r-3.jpg",
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-3.jpg",
             "name": "时尚先生",
             "price": "360.00"
         }

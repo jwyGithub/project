@@ -15,7 +15,11 @@ define(() => {
             this.btn.onclick = () => {
                 that.telV = that.tel.value;
                 that.pwdV = that.pwd.value;
-                that.login();
+                if (that.telV == "" || that.pwdV == "") {
+                    that.tip.innerHTML = "提示：请输入账号或密码";
+                } else {
+                    that.login();
+                }
             };
             this.back.onclick = () => {
                 location.href = "http://localhost/index/index.html";

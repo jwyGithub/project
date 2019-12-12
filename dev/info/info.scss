@@ -41,6 +41,10 @@ $float:left;
     right: 0;
 }
 
+
+
+
+
 //导航区域
 nav{
     background: $bgcolor;
@@ -66,6 +70,41 @@ nav{
             }
         }
     }
+}
+
+.war{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    background: rgba($color: #C0C0C0, $alpha: 1.0);
+    border-radius:20px;
+    z-index: 9999;
+    display: none;
+    p{
+        text-align: center;
+        font: 20px/30px "";
+        margin-top: 100px;
+        color: red;
+    }
+    .btns{
+        text-align: center;
+        margin-top: 100px;
+        input{
+            background: none;
+            border: 1px solid gray;
+            color: #000;
+            font: 14px/30px "";
+            padding: 0 10px;
+            margin: 0 20px;
+            color: #000;
+        }
+    }
+    
 }
 
 // header区域

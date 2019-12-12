@@ -2,7 +2,6 @@ define(() => {
     class load {
         constructor() {
             this.login = document.getElementById("login");
-            // console.log(this.login)
             this.reg = document.getElementById("reg");
             this.con = document.querySelector(".contribute");
             this.hot = document.querySelector(".wrapper-a");

@@ -70,6 +70,7 @@ define(() => {
                     that.aPrice();
                 } else if (target.getAttribute("class") == "del") {
                     target.parentElement.remove();
+                    that.aPrice();
                     for (var i = 0; i < that.lists.length; i++) {
                         if (that.lists[i].id == target.parentElement.getAttribute("id")) {
                             that.lists.splice(i, 1);

@@ -150,6 +150,7 @@ define(() => {
             $(".overmore").html(this.res.info);
         }
         addEvent() {
+            var that = this;
             // 起刊日期class
             var date = $(".date").find("dd");
             date.click(function () {
@@ -167,7 +168,8 @@ define(() => {
                 let user = getCookie("user");
                 // console.log(user)
                 if (!user) {
-                    console.log("未登录");
+                    $(".war").css("display", "block");
+                    that.back();
                 } else {
                     // 获取选择的值
                     var d = document.querySelectorAll(".date dd");
@@ -231,6 +233,14 @@ define(() => {
                     });
                     location.href = "http://localhost/car/car.html";
                 }
+            });
+        }
+        back() {
+            $("#login").click(() => {
+                location.href = "http://localhost/login/login.html";
+            });
+            $("#reg").click(() => {
+                $(".war").css("display", "none");
             });
         }
 

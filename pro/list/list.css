@@ -196,7 +196,8 @@ header {
             line-height: 16px;
             width: 210px;
             padding: 0 10px;
-            margin-top: 10px; }
+            margin-top: 10px;
+            height: 30px; }
           .content .right .goods ul li .items img {
             width: 28px;
             height: 28px; }
