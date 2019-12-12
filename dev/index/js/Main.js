@@ -7,7 +7,6 @@ require.config({
 
 require(["jq","index","banner"],(_,index,banner)=>{
 
-	
 	new index();
 	new banner({
 		banner:$(".banner").find(".imgbox").find("img")

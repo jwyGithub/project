@@ -1,10 +1,36 @@
-1.运行
+1.首页路径：
+				localhost/index/index.html
+				
+2.sass的路径：
+				project/dev/*/*.scss
+				
+3.模块化主文件的路径:
+				project/dev/*/js/main.js
+				
+4.项目的服务器环境
+				1.node环境
+				启动说明：
+						1.修改server.js文件中的以下代码:
+							let allowOrigin = {'http://localhost': true,}
+							将http://localhost:80替换成前端文件的服务器地址，否则会有跨域问题。
+						2.进入node文件下运行server.js文件和server2.js文件
+							
+5.项目的特色说明
+				1.注册验证账号与密码，并且会把账号密码存储在node环境中的userinfo.json文件中
+				2.登录时调用登录接口查询userinfo.json文件中是否存在，并提示对应错误
+				3.首页登录成功后会显示欢迎语句，未登录则不显示
+				4.项目请求的图片采用单独的服务器端口（server2.js文件），可以减少性能
+				5.登录注册关联购物车，未登录则不允许加入购物车
+				
+6.项目的bug说明
+				1.商品列表界面，点击增加数量后，添加购物车，数量未改变，目前是从cookie中读取
+				2.node环境中的regApi接口需要增加重复注册判断。
+				
+7.补充		
+				1.项目中的图片地址是绝对地址，需要修改为相对地址，并且server2.js文件也需要修改为拼接地址
 
-需要安装node 8.x版本
-
-2.启动gulp all命令
-
-3.启动node文件夹的server.js文件和server2.js文件
-
-4.本地访问localhost/index/index.html
-					http://localhost/login/login.html
+					
+					
+					
+					
+					
