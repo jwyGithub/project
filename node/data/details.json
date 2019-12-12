@@ -5,7 +5,7 @@
             "title":"幼儿画报课堂",
             "type":"幼儿画报",
             "info":"《幼儿画报课堂》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。读者...",
-            "price":"¥360.00",
+            "price":"360.00",
             "imgs":[
                 "http://localhost:82/imgs/details/1-01.jpg",
                 "http://localhost:82/imgs/details/1-02.jpg",
@@ -18,7 +18,7 @@
             "title":"幼儿画报（此杂志不参与订送活动）",
             "type":"幼儿画报",
             "info":"《幼儿画报》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。",
-            "price":"¥720.00",
+            "price":"720.00",
             "imgs":[
                "http://localhost:82/imgs/details/2-01.jpg"
             ]    
@@ -28,7 +28,7 @@
             "title":"幼儿画报绘本版",
             "type":"幼儿画报",
             "info":"",
-            "price":"¥240.00",
+            "price":"240.00",
             "imgs":[
                 "http://localhost:82/imgs/details/3-01.png"
             ]
@@ -39,14 +39,14 @@
             "title":"幼儿画报",
             "type":"无",
             "info":"幼儿画报",
-            "price":"¥600.00"
+            "price":"600.00"
         },
         {
             "id":5,
             "imgs":["http://localhost:82/imgs/listImg/list-5.jpg"],
             "info":"《中国国家地理》原名为《地理知识》。是具有很强的可读性和收藏性的关于地理的月刊杂志。具有很强的独家性和权威性。其内容以中国地理为主...",
             "title":"国家地理",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -54,7 +54,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-6.jpg"],
             "info":"National Geographic Kids美国国家地理儿童版，以8-14岁少年儿童为读者的地理刊物，指导他们亲身去认识世界，增长知识。",
             "title":"国家地理",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -62,7 +62,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-7.jpg"],
             "info":"美国国家地理英杂志《National Geographic Little Kids》幼儿版针对3~6 岁的小小孩所推出之杂誌",
             "title":"国家地理",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -70,7 +70,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-8.jpg"],
             "info":"《美国国家地理台湾版）》美国国家地理杂志授权台湾出版的中文版本。",
             "title":"国家地理",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -78,7 +78,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-9.jpg"],
             "info":"美国地理杂志累积一百多年为读者探索大自然的宝贵经验，呈现当今历史探勘的新发现。",
             "title":"国家地理",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -86,7 +86,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-10.jpg"],
             "info":"NATIONAL GEOGRAPHIC TRAVELER,National Geographic Traveler 是由美國国家地理學會出版的雜誌。成立於1984年，全世界不同語…",
             "title":"读者",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -94,7 +94,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-11.jpg"],
             "info":"《读者》杂志创刊于1981年1月，是甘肃人民出版社主办的一份综合类文摘杂志。原名《读者文摘》，1981年创刊时的《读者文摘》只有48页",
             "title":"读者",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -102,7 +102,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-12.jpg"],
             "info":"《意林·作文素材》是中国励志第一刊《意林》的“升级作文版”，专研中、高考作文，提分更有效！2010年创刊以来《意林·作文素材》...",
             "title":"意林",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {
@@ -110,7 +110,7 @@
             "imgs":["http://localhost:82/imgs/listImg/list-13.jpg"],
             "info":"《环球财经》注重财经事件的专业化、课题化研究，高超的策划者、事件的当事者、权威的研究者，“三合一”的特色，将为读者提供全球背景下的一流财经见解",
             "title":"财经",
-            "price":"¥600.00",
+            "price":"600.00",
             "type":""
         },
         {

@@ -6,6 +6,11 @@ define(() => {
             this.pwd = document.getElementById("pwd");
             this.log = document.getElementById("login");
             this.back = document.getElementById("back");
+            this.war = document.querySelector(".war");
+            // 手机号验证规则
+            this.phoneReg = /^[1]([3-9])[0-9]{9}$/;
+            // 密码正则
+            this.pwdReg = /^[a-z0-9_-]{6,18}$/;
             this.init();
         }
         init() {
@@ -13,7 +18,13 @@ define(() => {
             this.reg.onclick = () => {
                 that.telV = that.tel.value;
                 that.pwdV = that.pwd.value;
-                that.req();
+                if (!(that.phoneReg.test(that.telV))) {
+                    that.war.innerHTML = "号码不符合规范"
+                } else if (!(that.pwdReg.test(that.pwdV))) {
+                    that.war.innerHTML = "密码为6位英文和数字组合"
+                 } else {
+                    that.req();
+                }
             };
             this.back.onclick = () => {
                 location.href = "http://localhost/index/index.html";
@@ -43,8 +54,8 @@ define(() => {
             });
         }
         load() {
-            if(this.res.msg == "注册成功"){
-                location.href ="http://localhost/login/login.html"
+            if (this.res.msg == "注册成功") {
+                location.href = "http://localhost/login/login.html"
             }
         }
     }

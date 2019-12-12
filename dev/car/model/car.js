@@ -1,24 +1,75 @@
 define(() => {
     class Car {
         constructor() {
+            // 添加内容的区域
             this.goods = document.querySelector(".goods");
+            // 商品总价
             this.allPrice = document.querySelector(".allPrice");
+            // 初始化页面
             this.init();
-        }
-        init() {
-            this.items = getCookie("details", { path: '/' })
-            $("#next").click((eve)=>{
-                $(".msg").css("display","block")
-            })
-            this.load();
+            // 添加监听事件
             this.addEvent();
         }
-        load() {
-            this.lists = JSON.parse(this.items)
+        init() {
+            // 获取商品详情--->cookie
+            this.items = getCookie("details", { path: '/' });
+            // 渲染数据
+            this.display();
+        }
+        addEvent() {
+            var that = this;
+            // 点击下一步：提示功能未开放
+            $("#next").click((eve) => {
+                $(".msg").css("display", "block");
+            })
+            // 列表区域监听点击事件
+            this.goods.addEventListener("click", function (eve) {
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                // 减少数量事件
+                if (target.getAttribute("id") == "reduce") {
+                    if (target.nextElementSibling.value == 1) {
+                        target.nextElementSibling.value = 1;
+                    } else {
+                        target.nextElementSibling.value--;
+                        // 同步计算小计的值
+                        target.parentElement.nextElementSibling.innerHTML = target.nextElementSibling.value * parseInt($(".unitPrice").html()) + "元"
+                        // 并更新总计的值
+                        that.aPrice();
+                    }
+                    // 增加数量事件
+                } else if (target.getAttribute("id") == "add") {
+                    target.previousElementSibling.value++;
+                    // 同步计算小计的值
+                    target.parentElement.nextElementSibling.innerHTML = target.previousElementSibling.value * parseInt($(".unitPrice").html()) + "元"
+                    // 并更新总计的值
+                    that.aPrice();
+                    // 删除商品事件
+                } else if (target.getAttribute("class") == "del") {
+                    // 先把当前商品从页面删除
+                    target.parentElement.remove();
+                    // 并更新总计的值
+                    that.aPrice();
+                    // 循环遍历当前cookie中的哪个商品符合被删除的商品
+                    for (var i = 0; i < that.lists.length; i++) {
+                        if (that.lists[i].id == target.parentElement.getAttribute("id")) {
+                            // 如果符合，那么则从cookie中删除
+                            that.lists.splice(i, 1);
+                            break;
+                        }
+                    }
+                    // 重新设置cookie
+                    setCookie("details", JSON.stringify(that.lists), {
+                        path: "/"
+                    })
+                }
+            })
+        }
+        display() {
+            this.lists = JSON.parse(this.items);
             var str = "";
             for (var i = 0; i < this.lists.length; i++) {
-                str += `
-                <ul id ="${this.lists[i].id}">
+                str += `<ul id ="${this.lists[i].id}">
                     <li><input type="checkbox" checked></li>
                     <li>
                         <img src="${this.lists[i].img}" alt="">
@@ -41,55 +92,21 @@ define(() => {
                         <input id="num" type="text" value="${this.lists[i].number}">
                         <a href="#" id="add">+</a>
                     </li>
-                    <li class="money">${this.lists[i].number * this.lists[i].price.slice(1, this.lists[i].price.length)}</li>
+                    <li class="money">${this.lists[i].number * parseInt(this.lists[i].price)}元</li>
                     <li class="del">删除</li>
-                </ul>
-                `
+                </ul>`
             }
-            // console.log(str)
             this.goods.innerHTML = str;
+            // 当所有商品渲染完后，计算总价
             this.aPrice();
-        }
-        addEvent() {
-            var that = this;
-            this.goods.addEventListener("click", function (eve) {
-                var e = eve || window.event;
-                // e.preventDefault();
-                var target = e.target || e.srcElement;
-                if (target.getAttribute("id") == "reduce") {
-                    if (target.nextElementSibling.value == 1) {
-                        target.nextElementSibling.value = 1;
-                    } else {
-                        target.nextElementSibling.value--;
-                        target.parentElement.nextElementSibling.innerHTML =target.nextElementSibling.value * $(".unitPrice").html().slice(1, $(".unitPrice").html().length)
-                        that.aPrice();
-                    }
-                } else if (target.getAttribute("id") == "add") {
-                    target.previousElementSibling.value++;
-                    target.parentElement.nextElementSibling.innerHTML = target.previousElementSibling.value * $(".unitPrice").html().slice(1, $(".unitPrice").html().length)
-                    that.aPrice();
-                }else if(target.getAttribute("class") == "del"){
-                    target.parentElement.remove();
-                    that.aPrice();
-                    for(var i = 0;i<that.lists.length;i++){
-                        if(that.lists[i].id == target.parentElement.getAttribute("id")){
-                            that.lists.splice(i,1);
-                            break;
-                        }
-                    }
-                    setCookie("details",JSON.stringify(that.lists),{
-                        path:"/"
-                    })
-                }
-            })
         }
         aPrice() {
             this.all = document.querySelectorAll(".money");
             var a = 0;
             for (var i = 0; i < this.all.length; i++) {
-                a = a + Number(this.all[i].innerHTML)
+                a = a + parseInt(this.all[i].innerHTML)
             }
-            this.allPrice.innerHTML = a+ "元"
+            this.allPrice.innerHTML = a + "元"
         }
 
     }
@@ -105,18 +122,6 @@ define(() => {
         }
         return "";
     }
-
-
-    //删除cookie
-    function removeCookie(key, options) {
-        options = options || {};
-        setCookie(key, null, {
-            expires: -1,
-            path: options.path
-        })
-    }
-
-
     //设置cookie
     function setCookie(key, val, options) {
         options = options || {};

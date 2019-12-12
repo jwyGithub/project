@@ -8,6 +8,7 @@ define(() => {
             this.back = document.getElementById("back");
             this.tip = document.querySelector(".tip");
             this.forget = document.querySelector(".forget");
+  
             this.addEvent();
         }
         addEvent() {

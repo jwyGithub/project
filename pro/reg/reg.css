@@ -86,12 +86,12 @@ header {
           margin-right: 10px; }
       .body .content .msg > ul li.focus {
         border-color: #2194ed; }
-    .body .content .msg > span {
+    .body .content .msg .war {
       font-size: 14px;
       font-weight: normal;
       font-family: "";
-      line-height: 50px;
-      margin-left: 10px; }
+      line-height: 30px;
+      float: right; }
     .body .content .msg #reg {
       margin-top: 20px;
       text-align: center;

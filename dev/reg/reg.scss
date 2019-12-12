@@ -102,9 +102,9 @@ header{
                     border-color: #2194ed;
                 }
             }
-            > span{
-                @include font(normal, 14px, 50px, "");
-                margin-left: 10px;
+            .war{
+                @include font(normal, 14px, 30px, "");
+                float: right;
             }
             #reg{
                 margin-top: 20px;
