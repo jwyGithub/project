@@ -1,229 +1,238 @@
 {
     "contribute": [
         {
-            "type": "我要投稿",
             "id":1,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute.jpg"
         },
         {
-            "type": "我要投稿",
             "id":2,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute1.png"
         },
         {
-            "type": "我要投稿",
             "id":3,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute2.png"
         },
         {
-            "type": "我要投稿",
             "id":4,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute3.png"
         },
         {
-            "type": "我要投稿",
             "id":5,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute4.png"
         },
         {
-            "type": "我要投稿",  
             "id":6,
+            "type": "我要投稿",  
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute5.png"
         },
         {
-            "type": "我要投稿",
             "id":7,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute6.png"
         },
         {
-            "type": "我要投稿",
             "id":8,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute7.png"
         },
         {
-            "type": "我要投稿",
             "id":9,
+            "type": "我要投稿",
             "imgurl": "http://localhost:82/imgs/indexImg/contribute/contribute8.png"
         }
     ],
     "hot": [
         {
+            "hotid": 15,
             "type": "热门推荐",
-            "hotid": 1,
-            "imgurl": "http://localhost:82/imgs/indexImg/wrapper/hot/hot1.jpg",
-            "name": "中国企业家",
-            "price": "240.00"
-        },
-        {
-            "type": "热门推荐",
-            "hotid": 2,
-            "imgurl": "http://localhost:82/imgs/indexImg/wrapper/hot/hot2.jpg",
-            "name": "中国国家地理",
-            "price": "360.00"
-        },
-        {
-            "type": "热门推荐",
-            "hotid": 3,
-            "imgurl": "http://localhost:82/imgs/indexImg/wrapper/hot/hot3.jpg",
-            "name": "中国三联生活周刊",
-            "price": "780.00"
-        },
-        {
-            "type": "热门推荐",
-            "hotid": 4,
-            "imgurl": "http://localhost:82/imgs/indexImg/wrapper/hot/hot4.jpg",
-            "name": "HBRC哈佛商业评论(中文版)",
-            "price": "700.00"
-        },
-        {
-            "type": "热门推荐",
-            "hotid": 5,
-            "imgurl": "http://localhost:82/imgs/indexImg/wrapper/hot/hot5.jpg",
-            "name": "幼儿画报",
-            "price": "360.00"
-        }
-    ],
-    "oneFr": [
-        {
-            "id":1,
             "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-1.jpg",
             "name": "中国经济周刊",
             "price": "480.00"
         },
         {
-            "id":2,
-            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-2.jpg",
-            "name": "消费导刊",
-            "price": "180.00"
-        },
-        {
-            "id":3,
-            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-3.jpg",
-            "name": "审计与理财",
-            "price": "120.00"
-        },
-        {
-            "id":4,
-            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-4.jpg",
-            "name": "证券市场周刊",
-            "price": "690.00"
-        },
-        {
-            "id":5,
-            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-5.jpg",
-            "name": "新财富",
-            "price": "240.00"
-        },
-        {
-            "id":6,
-            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-6.jpg",
-            "name": "销售与市场",
-            "price": "480.00"
-        }
-    ],
-
-
-    "twoFr": [
-        {
-            "id":1,
+            "hotid": 21,
+            "type": "热门推荐",
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-1.jpg",
             "name": "父母必读",
             "price": "480.00"
         },
         {
-            "id":2,
+            "hotid": 27,
+            "type": "热门推荐",
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/3f-r-1.jpg",
+            "name": "中国国家地理",
+            "price": "780.00"
+        },
+        {
+            "hotid": 33,
+            "type": "热门推荐",
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/4f-r-1.jpg",
+            "name": "瑞丽美容服饰",
+            "price": "130.00"
+        },
+        {
+            "hotid": 35,
+            "type": "热门推荐",
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/4f-r-3.jpg",
+            "name": "时尚先生",
+            "price": "360.00"
+        }
+    ],
+    "oneFr": [
+        {
+            "id":15,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-1.jpg",
+            "name": "中国经济周刊",
+            "price": "480.00"
+        },
+        {
+            "id":16,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-2.jpg",
+            "name": "消费导刊",
+            "price": "180.00"
+        },
+        {
+            "id":17,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-3.jpg",
+            "name": "审计与理财",
+            "price": "120.00"
+        },
+        {
+            "id":18,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-4.jpg",
+            "name": "证券市场周刊",
+            "price": "690.00"
+        },
+        {
+            "id":19,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-5.jpg",
+            "name": "新财富",
+            "price": "240.00"
+        },
+        {
+            "id":20,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-6.jpg",
+            "name": "销售与市场",
+            "price": "480.00"
+        }
+    ],
+    "twoFr": [
+        {
+            "id":21,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-1.jpg",
+            "name": "父母必读",
+            "price": "480.00"
+        },
+        {
+            "id":22,
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-2.jpg",
             "name": "幼儿画报",
             "price": "180.00"
         },
         {
-            "id":3,
+            "id":23,
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-3.jpg",
             "name": "演讲与口才.学生版",
             "price": "120.00"
         },
         {
+            "id":24,
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-4.jpg",
             "name": "课堂内外（小学版）",
             "price": "690.00"
         },
         {
-            "id":4,
+            "id":25,
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-5.jpg",
             "name": "童趣-环球探索",
             "price": "240.00"
         },
         {
-            "id":5,
+            "id":26,
             "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-6.jpg",
             "name": "中等数学",
             "price": "120.00"
         }
     ],
-
-
     "threeFr": [
         {
+            "id":27,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-1.jpg",
-            "name": "父母必读",
-            "price": "480.00"
+            "name": "中国国家地理",
+            "price": "360.00"
         },
         {
+            "id":28,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-2.jpg",
-            "name": "幼儿画报",
+            "name": "博物杂志",
             "price": "180.00"
         },
         {
+            "id":29,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-3.jpg",
-            "name": "演讲与口才.学生版",
-            "price": "120.00"
+            "name": "时代楼盘",
+            "price": "540.00"
         },
         {
+            "id":30,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-4.jpg",
-            "name": "课堂内外（小学版）",
-            "price": "690.00"
+            "name": "建筑学报",
+            "price": "552.00"
         },
         {
+            "id":31,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-5.jpg",
-            "name": "童趣-环球探索",
-            "price": "240.00"
+            "name": "世界建筑",
+            "price": "480.00"
         },
         {
+            "id":32,
             "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-6.jpg",
-            "name": "中等数学",
+            "name": "探索奥秘",
             "price": "120.00"
         }
     ],
 
     "fourFr": [
         {
+            "id":33,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-1.jpg",
-            "name": "父母必读",
+            "name": "瑞丽美容服饰",
             "price": "480.00"
         },
         {
+            "id":34,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-2.jpg",
-            "name": "幼儿画报",
+            "name": "瑞丽伊人风尚",
             "price": "180.00"
         },
         {
+            "id":35,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-3.jpg",
-            "name": "演讲与口才.学生版",
+            "name": "时尚先生",
             "price": "120.00"
         },
         {
+            "id":36,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-4.jpg",
-            "name": "课堂内外（小学版）",
+            "name": "男人装",
             "price": "690.00"
         },
         {
+            "id":37,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-5.jpg",
-            "name": "童趣-环球探索",
+            "name": "昕薇订阅",
             "price": "240.00"
         },
         {
+            "id":38,
             "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-6.jpg",
-            "name": "中等数学",
+            "name": "时尚健康(男士)",
             "price": "120.00"
         }
     ]

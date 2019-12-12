@@ -90,6 +90,174 @@
             "title":"《环球财经》注重财经事件的专业化、课题化研究，高超的策划者、事件的当事者、权威的研究者，“三合一”的特色，将为读者提供全球背景下的一流财经见解",
             "keyword":"财经",
             "price":"¥600.00"
+        },
+        {
+            "goodsId":15,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-1.jpg",
+            "title":"《中国经济周刊》是人民日报社主管主办的国内目前唯一一份经济周刊杂志，也是中国最早的一份经济周刊。前身是《中国经济快讯》周刊。",
+            "keyword": "中国经济周刊",
+            "price": "480.00"
+        },
+        {
+            "goodsId":16,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-2.jpg",
+            "title":"《消费导刊》杂志是由中国轻工业联合会主管主办的国家级大型综合理论期刊，连续两届荣获，中文核心期刊(1996)、中文核心期刊(1...",
+            "keyword": "消费导刊",
+            "price": "180.00"
+        },
+        {
+            "goodsId":17,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-3.jpg",
+            "title":"《审计与理财》杂志是其宗旨是宣传和贯彻审计工作的方针政策，研究审计与理财理论，推崇和介绍审计工作实践，为开拓审计事业服务，为帮...",
+            "keyword": "审计与理财",
+            "price": "120.00"
+        },
+        {
+            "goodsId":18,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-4.jpg",
+            "title":"权威性强的证券杂志",
+            "keyword": "证券市场周刊",
+            "price": "690.00"
+        },
+        {
+            "goodsId":19,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-5.jpg",
+            "title":"《新财富》是一本关于企业发方向性、策略性的杂志。通过报道中国榜样企业企业财富创造方式及创造财富的人物，深入分析前沿企业及其管理层",
+            "keyword": "新财富",
+            "price": "240.00"
+        },
+        {
+            "goodsId":20,
+            "imgurl": "http://localhost:82/imgs/indexImg/1f/1f-r-6.jpg",
+            "title":"《销售与市场》创刊于1994年，经20年不懈发展，在此基础上，已形成国内最大的营销期刊群。包括《销售与市场》、《北大商业评论》...",
+            "keyword": "销售与市场",
+            "price": "480.00"
+        },
+        {
+            "goodsId":21,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-1.jpg",
+            "title":"《父母必读》杂志是一本倡导智慧育儿生活、帮助父母享受快乐养育生活的高品质杂志，是三届国家期刊奖唯一育儿杂志获得者，中国育儿杂志第一品牌",
+            "keyword": "父母必读",
+            "price": "480.00"
+        },
+        {
+            "goodsId":22,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-2.jpg",
+            "title":"《幼儿画报》创刊于1982年，由共青团中央主管，由我国最大、最权威的少儿传媒出版集团——中国少年儿童新闻出版总社主办。",
+            "keyword": "幼儿画报",
+            "price": "180.00"
+        },
+        {
+            "goodsId":23,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-3.jpg",
+            "title":"该杂志创始人为邵守义，他对我国演讲与口才理论的研究做出了巨大的贡献，被誉为“新时期演讲事业的开拓者”。",
+            "keyword": "演讲与口才.学生版",
+            "price": "120.00"
+        },
+        {
+            "goodsId":24,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-4.jpg",
+            "title":"《课堂内外》（小学版）适合小学3-6年级阅读 ​这本杂志让你的生活充满想象，让你的学习充满乐趣，让你的童年精彩无限！",
+            "keyword": "课堂内外（小学版）",
+            "price": "690.00"
+        },
+        {
+            "goodsId":25,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-5.jpg",
+            "title":"美国探索频道官方授权、中科院老科协推荐的青少年科普读物、6-14岁孩子的科普学习杂志",
+            "keyword": "童趣-环球探索",
+            "price": "240.00"
+        },
+        {
+            "goodsId":26,
+            "imgurl": "http://localhost:82/imgs/indexImg/2f/2f-r-6.jpg",
+            "title":"《中等数学》（月刊）创刊于1982年，是由天津市教育委员会主管、天津师范大学、天津市数学学会、中国数学会普及工作委员会主办的一本专门报道初、高中数学竞赛的杂志，在国内独树一帜。",
+            "keyword": "中等数学",
+            "price": "120.00"
+        },
+        {
+            "goodsId":27,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-1.jpg",
+            "title":"《中国国家地理》原名为《地理知识》。是具有很强的可读性和收藏性的关于地理的月刊杂志。具有很强的独家性和权威性。其内容以中国地理为主...",
+            "keyword": "中国国家地理",
+            "price": "360.00"
+        },
+        {
+            "goodsId":28,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-2.jpg",
+            "title":"《博物》是2004年《中国国家地理》杂志社出版的杂志，《博物》是《中国国家地理》青春版，是在CNG同一品牌下，依据读者定位不同",
+            "keyword": "博物杂志",
+            "price": "180.00"
+        },
+        {
+            "goodsId":29,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-3.jpg",
+            "title":"《时代楼盘》杂志是香港科讯国际出版有限公司策划出版的大型建筑类月刊，是全国首家反映楼盘设计领域现状及成果的专业刊物。自创刊以来...",
+            "keyword": "时代楼盘",
+            "price": "540.00"
+        },
+        {
+            "goodsId":30,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-4.jpg",
+            "title":"《建筑学报》是由中国科学技术协会主管，中国建筑学会主办的国家一级学术期刊。。",
+            "keyword": "建筑学报",
+            "price": "552.00"
+        },
+        {
+            "goodsId":31,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-5.jpg",
+            "title":"《世界建筑》是国家一级杂志，中国建筑科学类核心期刊。它创刊于1980年10月，由清华大学主办，国内外公开发行。《世界建筑》是介绍...",
+            "keyword": "世界建筑",
+            "price": "480.00"
+        },
+        {
+            "goodsId":32,
+            "imgurl": "http://localhost:82/imgs/indexImg/3f/3f-r-6.jpg",
+            "title":"《探索奥秘》这里有令人费解的未解之谜，这里有神秘莫测的海底世界，这里有美轮美奂的奥秘宇宙",
+            "keyword": "探索奥秘",
+            "price": "120.00"
+        },
+        {
+            "goodsId":33,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-1.jpg",
+            "title":"引领服饰、美容时尚风潮",
+            "keyword": "瑞丽美容服饰",
+            "price": "480.00"
+        },
+        {
+            "goodsId":34,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-2.jpg",
+            "title":"《瑞丽伊人时尚》杂志由北京《瑞丽》杂志社倾力打造，目前主要有《瑞丽服饰美容》和《瑞丽伊人风尚》两大时尚类杂志，发行量稳居全国第一...",
+            "keyword": "瑞丽伊人风尚",
+            "price": "180.00"
+        },
+        {
+            "goodsId":35,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-3.jpg",
+            "title":"《时尚先生》是《时尚》杂志社1999年4月与世界名刊《ESQUIRE》杂志版权合作的结晶。《时尚先生》在生活消费方面给予男士们指导",
+            "keyword": "时尚先生",
+            "price": "120.00"
+        },
+        {
+            "goodsId":36,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-4.jpg",
+            "title":"《男人装》全球真性情男性杂志、国际男性杂志市场的当红杂志《FHM》于2004年4月23日以《男人装》的名义登陆中国内地市场。",
+            "keyword": "男人装",
+            "price": "690.00"
+        },
+        {
+            "goodsId":37,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-5.jpg",
+            "title":"《ViVi昕薇》是由中国纺织出版社主办，与日本讲谈社《ViVi》杂志合作的一本时尚杂志。讲谈社是日本最大的出版社，创办于1909年",
+            "keyword": "昕薇订阅",
+            "price": "240.00"
+        },
+        {
+            "goodsId":38,
+            "imgurl": "http://localhost:82/imgs/indexImg/4f/4f-r-6.jpg",
+            "title":"《时尚健康男士》引领潮流的高档男性减压杂志",
+            "keyword": "时尚健康(男士)",
+            "price": "120.00"
         }
     ]
 }
