@@ -143,7 +143,7 @@ define(function () {
                 var that = this;
                 // http://localhost:81/common/login
                 $.ajax({
-                    url: "http://localhost/pro/common/index",
+                    url: "http://localhost/common/index",
                     success: function success(res) {
                         // console.log(typeof res)
                         that.res = JSON.parse(res);
