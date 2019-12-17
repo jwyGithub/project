@@ -1,19 +1,16 @@
-1.首页路径：
-				localhost/index/index.html
+﻿1.首页路径：
+				http://localhost/pro/index/index.html
 				
 2.sass的路径：
-				project/dev/*/*.scss
+				project/node/pro/*/*.sass
 				
 3.模块化主文件的路径:
-				project/dev/*/js/main.js
+				project/node/pro/*/js/main.js
 				
 4.项目的服务器环境
 				1.node环境
 				启动说明：
-						1.修改server.js文件中的以下代码:
-							let allowOrigin = {'http://localhost': true,}
-							将http://localhost:80替换成前端文件的服务器地址，否则会有跨域问题。
-						2.进入node文件下运行server.js文件和server2.js文件
+						1.启动根目录server.js文件
 							
 5.项目的特色说明
 				1.注册验证账号与密码，并且会把账号密码存储在node环境中的userinfo.json文件中
@@ -25,9 +22,13 @@
 6.项目的bug说明
 				1.商品列表界面，点击增加数量后，添加购物车，数量未改变，目前是从cookie中读取
 				2.node环境中的regApi接口需要增加重复注册判断。
+					(于12月17日修复此bug)
 				
 7.补充		
 				1.项目中的图片地址是绝对地址，需要修改为相对地址，并且server2.js文件也需要修改为拼接地址
+					(于12月17日修改为静态资源文件，后期修改为从数据库查询)	
+				2.接口目前查询的是本地的json文件，后期需要修改为从数据库查询
+
 
 					
 					
