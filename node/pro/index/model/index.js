@@ -36,10 +36,10 @@ define(function () {
 
                 var that = this;
                 this.login.onclick = function () {
-                    location.href = "http://localhost/login/login.html";
+                    location.href = "http://localhost/pro/login/login.html";
                 };
                 this.reg.onclick = function () {
-                    location.href = "http://localhost/reg/reg.html";
+                    location.href = "http://localhost/pro/reg/reg.html";
                 };
                 this.search.onclick = function () {
                     that.keywordV = _this.keyword.value;
@@ -59,7 +59,7 @@ define(function () {
                     removeCookie("keyword", {
                         path: "/"
                     });
-                    location.href = "http://localhost/login/login.html";
+                    location.href = "http://localhost/pro/login/login.html";
                 };
 
                 var _loop = function _loop(i) {
@@ -82,7 +82,7 @@ define(function () {
                         _setCookie("keyword", a[_i].innerHTML, {
                             path: "/"
                         });
-                        location.href = "http://localhost/list/list.html";
+                        location.href = "http://localhost/pro/list/list.html";
                     };
                 };
 
@@ -143,7 +143,7 @@ define(function () {
                 var that = this;
                 // http://localhost:81/common/login
                 $.ajax({
-                    url: "http://localhost:81/common/index",
+                    url: "http://localhost/pro/common/index",
                     success: function success(res) {
                         // console.log(typeof res)
                         that.res = JSON.parse(res);
@@ -159,7 +159,7 @@ define(function () {
                     path: "/"
                 });
 
-                location.href = "http://localhost/list/list.html";
+                location.href = "http://localhost/pro/list/list.html";
             }
         }, {
             key: "display",

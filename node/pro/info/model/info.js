@@ -147,7 +147,7 @@ define(function () {
             value: function load() {
                 var that = this;
                 $.ajax({
-                    url: "http://localhost:81/common/details",
+                    url: "http://localhost/common/detail",
                     data: {
                         "goodsId": that.id
                     },
@@ -267,7 +267,7 @@ define(function () {
                         setCookie("details", JSON.stringify(_this2.goodItems), {
                             path: "/"
                         });
-                        location.href = "http://localhost/car/car.html";
+                        location.href = "http://localhost/pro/car/car.html";
                     }
                 });
             }
@@ -275,7 +275,7 @@ define(function () {
             key: "back",
             value: function back() {
                 $("#login").click(function () {
-                    location.href = "http://localhost/login/login.html";
+                    location.href = "http://localhost/pro/login/login.html";
                 });
                 $("#reg").click(function () {
                     $(".war").css("display", "none");

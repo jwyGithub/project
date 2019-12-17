@@ -38,10 +38,10 @@ define(function () {
                     }
                 };
                 this.back.onclick = function () {
-                    location.href = "http://localhost/index/index.html";
+                    location.href = "http://localhost/pro/index/index.html";
                 };
                 this.log.onclick = function () {
-                    location.href = "http://localhost/login/login.html";
+                    location.href = "http://localhost/pro/login/login.html";
                 };
             }
         }, {
@@ -49,10 +49,10 @@ define(function () {
             value: function req() {
                 var that = this;
                 $.ajax({
-                    url: "http://localhost:81/common/reg",
+                    url: "http://localhost/common/reg",
                     data: {
                         user: that.telV,
-                        pass: that.pwdV
+                        pwd: that.pwdV
                     },
                     type: "post",
                     success: function success(res, status) {
@@ -69,8 +69,8 @@ define(function () {
         }, {
             key: "load",
             value: function load() {
-                if (this.res.msg == "注册成功") {
-                    location.href = "http://localhost/login/login.html";
+                if (this.res.msg == "success" &&  this.res.code == "200") {
+                    location.href = "http://localhost/pro/login/login.html";
                 }
             }
         }]);

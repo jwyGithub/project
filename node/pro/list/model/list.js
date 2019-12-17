@@ -63,7 +63,7 @@ define(function () {
                         setCookie("goodsId", target.parentElement.id, {
                             path: "/"
                         });
-                        location.href = "http://localhost/info/info.html";
+                        location.href = "http://localhost/pro/info/info.html";
                     }
                 });
             }
@@ -76,7 +76,7 @@ define(function () {
                     return;
                 }
                 $.ajax({
-                    url: "http://localhost:81/common/search",
+                    url: "http://localhost/common/search",
                     data: {
                         key: that.key
                     },

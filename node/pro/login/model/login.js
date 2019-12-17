@@ -34,10 +34,10 @@ define(function () {
                     }
                 };
                 this.back.onclick = function () {
-                    location.href = "http://localhost/index/index.html";
+                    location.href = "http://localhost/pro/index/index.html";
                 };
                 this.reg.onclick = function () {
-                    location.href = "http://localhost/reg/reg.html";
+                    location.href = "http://localhost/pro/reg/reg.html";
                 };
                 this.forget.onclick = function () {
                     that.tip.innerHTML = "提示：此功能暂未开放";
@@ -48,10 +48,10 @@ define(function () {
             value: function login() {
                 var that = this;
                 $.ajax({
-                    url: "http://localhost:81/common/login",
+                    url: "http://localhost/common/login",
                     data: {
                         user: that.telV,
-                        pass: that.pwdV
+                        pwd: that.pwdV
                     },
                     type: "post",
                     success: function success(res, status) {
@@ -75,7 +75,7 @@ define(function () {
                     setCookie("user", this.telV, {
                         path: "/"
                     });
-                    location.href = "http://localhost/index/index.html";
+                    location.href = "http://localhost/pro/index/index.html";
                 }
             }
         }]);

@@ -10,5 +10,5 @@ require(["jq", "info"], (_, info) => {
 	new info.detail();
 	setTimeout(() => {
 		new info.banner();
-	}, 1000);
+	}, 100);
 });
